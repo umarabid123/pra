@@ -79,9 +79,10 @@ const Header = () => {
         </div>
         <div className="button flex justify-center items-center">
           <div className="text hidden md:block px-3 py-1 hover:bg-gray-100 text-sm font-medium cursor-pointer">
-            <button className="hidden md:block px-3 py-1 hover:bg-gray-100 text-sm font-medium cursor-pointer whitespace-nowrap text-[#000000]">
+           <Link href="/listhangar"> <button className="hidden md:block px-3 py-1 hover:bg-gray-100 text-sm font-medium cursor-pointer whitespace-nowrap text-[#000000]">
               List a hanger
             </button>
+            </Link>
           </div>
           <div className="hamber flex items-center gap-2 p-[4px] border-[1px] border-gray-400 rounded-[9999px]">
             <svg
