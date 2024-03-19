@@ -2,9 +2,9 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <div className="mx-[38px] px-[20px]">
-      <nav className=" flex items-center justify-between">
-        <div className="nav-item-1 ">
+    <div className="box-border bg-white sticky top-0 mb-5 z-30">
+      <nav className="px-[20px] xl:px-[58px] flex items-center justify-between py-[10px] shadow-lg">
+        <div className="nav-item-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 566 128"
@@ -32,19 +32,31 @@ const Header = () => {
               </g>
             </g>
           </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 166 128"
+            class="!fill-[#00aeef] w-20  pb-1 md:py-0 md:hidden"
+          >
+            <g class="" id="Layer_2">
+              <g>
+                <path d="M69.87,70.1c-2.3-1.77-5.65-2.88-9.38-2.88s-7.08,1.11-9.38,2.88c-2.87,2.21-.58,5.7,3.74,5.7h11.28c4.32,0,6.61-3.49,3.74-5.7Z"></path>
+                <path d="M108.54,42.89h0c-28.75-20.74-67.34-20.72-96.07,.05h0c-3.07,2.22-4.89,5.8-4.89,9.61v43.27c0,4.09,3.28,7.41,7.32,7.41H106.16c4.06,0,7.35-3.33,7.35-7.44V52.66c0-3.88-1.85-7.52-4.97-9.77Zm-3.17,34.03c0,2.14-1.74,3.88-3.88,3.88h-8.24c.04,.22,.06,.45,.06,.68,0,2.16-1.75,3.91-3.91,3.91s-3.91-1.75-3.91-3.91c0-.23,.02-.46,.06-.68h-7.02c-1.91,8.19-9.26,14.3-18.04,14.3s-16.13-6.11-18.04-14.3h-6.99c.04,.22,.06,.45,.06,.68,0,2.16-1.75,3.91-3.91,3.91s-3.91-1.75-3.91-3.91c0-.23,.02-.46,.06-.68h-8.14c-2.14,0-3.88-1.74-3.88-3.88v-.06c0-2.14,1.74-3.88,3.88-3.88h22.7c1.45-7.35,7.25-13.13,14.61-14.56v-7.3c0-2.16,1.75-3.91,3.91-3.91s3.91,1.75,3.91,3.91v7.45c7.02,1.65,12.51,7.3,13.91,14.41h22.82c2.14,0,3.88,1.74,3.88,3.88v.06Z"></path>
+              </g>
+            </g>
+          </svg>
         </div>
         <div className="item-2 md:bg-white md:shadow-md md:border md:min-h-[50px] rounded-full md:flex md:items-center md:py-1 md:px-2.5">
           <div className="search ">
             <div class="flex items-center  text-gray-500 text-xs 2xl:text-lg">
-              <span class="text-black font-semibold  whitespace-nowrap">
+              <span class="hidden md:block text-black  font-semibold ml-[1rem] whitespace-nowrap">
                 Anywhere
               </span>
-              <span class="h-[20px] w-[1px] border bg-[#000000] mx-1 sm:mx-3"></span>
-              <span class="text-black font-semibold  whitespace-nowrap">
+              <span class="hidden md:block h-[20px] w-[1px] border bg-[#000000] mx-1 sm:mx-3"></span>
+              <span class="hidden md:block text-black font-semibold  whitespace-nowrap">
                 Any Week
               </span>
-              <span class="h-[20px] w-[1px] border bg-[#000000]  mx-1 sm:mx-3"></span>
-              <span class="sm:mr-3 !font-light whitespace-nowrap">
+              <span class="hidden md:block h-[20px] w-[1px] border bg-[#000000]  mx-1 sm:mx-3"></span>
+              <span class="hidden md:block sm:mr-3 !font-light whitespace-nowrap">
                 Any Aircraft
               </span>
               <div className="search-icon w-9 h-9 rounded-full bg-[#00aeef] flex items-center justify-center ">
@@ -71,37 +83,37 @@ const Header = () => {
               List a hanger
             </button>
           </div>
-            <div className="hamber flex items-center gap-2 p-[4px] border-[1px] border-gray-400 rounded-[9999px]">
+          <div className="hamber flex items-center gap-2 p-[4px] border-[1px] border-gray-400 rounded-[9999px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 ml-1"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+              style={{}}
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+            <div className="logo ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5 ml-1"
-                fill="none"
                 viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-                style={{}}
+                fill="currentColor"
+                class="pt-1 w-7 h-7 bg-slate-500 text-white rounded-full"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M4 6h16M4 12h16M4 18h16"
+                  fill-rule="evenodd"
+                  d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
+                  clip-rule="evenodd"
                 ></path>
               </svg>
-              <div className="logo ">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="pt-1 w-7 h-7 bg-slate-500 text-white rounded-full"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-              </div>
             </div>
+          </div>
         </div>
       </nav>
     </div>
