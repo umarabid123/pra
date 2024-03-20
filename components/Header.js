@@ -1,6 +1,9 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Header = () => {
+  const router = useRouter();
+  console.log(router);
   return (
     <div className="box-border bg-white sticky top-0 mb-5 z-30">
       <nav className="px-[20px] xl:px-[58px] flex items-center justify-between py-[10px] shadow-lg">
@@ -79,10 +82,13 @@ const Header = () => {
         </div>
         <div className="button flex justify-center items-center">
           <div className="text hidden md:block px-3 py-1 hover:bg-gray-100 text-sm font-medium cursor-pointer">
-           <Link href="/listhangar"> <button className="hidden md:block px-3 py-1 hover:bg-gray-100 text-sm font-medium cursor-pointer whitespace-nowrap text-[#000000]">
-              List a hanger
-            </button>
-            </Link>
+            { (router.asPath.includes("listhangar") || router.asPath.includes("abouthangar") || router.asPath.includes("hangarlocation")) ? null:
+              <Link href="/listhangar">
+                <button className="hidden md:block px-3 py-1 hover:bg-gray-100 text-sm font-medium cursor-pointer whitespace-nowrap text-[#000000]">
+                  List a hanger
+                </button>
+              </Link>
+            }
           </div>
           <div className="hamber flex items-center gap-2 p-[4px] border-[1px] border-gray-400 rounded-[9999px]">
             <svg

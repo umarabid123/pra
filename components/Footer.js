@@ -1,4 +1,6 @@
+
 const Footer = () => {
+  
   return (
     <footer className="">
       <div className="footer-txt flex justify-center md:justify-between items-center bottom-0  bg-white xl:px-14 footer-menu fixed z-20 left-0 transition-all md:!bottom-[0px] duration-500  h-12 border-t border-[#ebebeb] w-full">
