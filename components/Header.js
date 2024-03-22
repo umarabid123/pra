@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useState } from "react";
 
 const Header = () => {
+  const [open, setOpen] = useState(false);
   const router = useRouter();
   console.log(router);
   return (
@@ -48,79 +50,111 @@ const Header = () => {
             </g>
           </svg>
         </div>
-        <div className="item-2 md:bg-white md:shadow-md md:border md:min-h-[50px] rounded-full md:flex md:items-center md:py-1 md:px-2.5">
-          <div className="search ">
-            <div class="flex items-center  text-gray-500 text-xs 2xl:text-lg">
-              <span class="hidden md:block text-black  font-semibold ml-[1rem] whitespace-nowrap">
-                Anywhere
-              </span>
-              <span class="hidden md:block h-[20px] w-[1px] border bg-[#000000] mx-1 sm:mx-3"></span>
-              <span class="hidden md:block text-black font-semibold  whitespace-nowrap">
-                Any Week
-              </span>
-              <span class="hidden md:block h-[20px] w-[1px] border bg-[#000000]  mx-1 sm:mx-3"></span>
-              <span class="hidden md:block sm:mr-3 !font-light whitespace-nowrap">
-                Any Aircraft
-              </span>
-              <div className="search-icon w-9 h-9 rounded-full bg-[#00aeef] flex items-center justify-center ">
+        {router.asPath.includes("hangarlocation") ? null : (
+          <div className="item-2 md:bg-white md:shadow-md md:border md:min-h-[50px] rounded-full md:flex md:items-center md:py-1 md:px-2.5">
+            <div className="search ">
+              <div class="flex items-center  text-gray-500 text-xs 2xl:text-lg">
+                <span class="hidden md:block text-black  font-semibold ml-[1rem] whitespace-nowrap">
+                  Anywhere
+                </span>
+                <span class="hidden md:block h-[20px] w-[1px] border bg-[#000000] mx-1 sm:mx-3"></span>
+                <span class="hidden md:block text-black font-semibold  whitespace-nowrap">
+                  Any Week
+                </span>
+                <span class="hidden md:block h-[20px] w-[1px] border bg-[#000000]  mx-1 sm:mx-3"></span>
+                <span class="hidden md:block sm:mr-3 !font-light whitespace-nowrap">
+                  Any Aircraft
+                </span>
+                {router.asPath.includes("hangarlocation") ? null : (
+                  <div className="search-icon w-9 h-9 rounded-full bg-[#00aeef] flex items-center justify-center ">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 text-[#00AEEF]"
+                      x="0px"
+                      y="0px"
+                      width="2"
+                      height="20"
+                      viewBox="0 0 47 47"
+                      fill="#fff"
+                      style={{ padding: "" }}
+                    >
+                      <path d="M 20.5 6 C 12.515556 6 6 12.515562 6 20.5 C 6 28.484438 12.515556 35 20.5 35 C 23.773158 35 26.788919 33.893018 29.220703 32.050781 L 38.585938 41.414062 A 2.0002 2.0002 0 1 0 41.414062 38.585938 L 32.050781 29.220703 C 33.893017 26.788918 35 23.773156 35 20.5 C 35 12.515562 28.484444 6 20.5 6 z M 20.5 10 C 26.322685 10 31 14.677319 31 20.5 C 31 23.295711 29.914065 25.820601 28.148438 27.697266 A 2.0002 2.0002 0 0 0 27.701172 28.144531 C 25.824103 29.912403 23.29771 31 20.5 31 C 14.677315 31 10 26.322681 10 20.5 C 10 14.677319 14.677315 10 20.5 10 z"></path>
+                    </svg>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
+        <div className="hamber-main relative right-0">
+          <div onClick={()=>setOpen(!open)} className="button flex justify-center items-center">
+            <div className="text hidden md:block px-3 py-1 hover:bg-gray-100 text-sm font-medium cursor-pointer">
+              {router.asPath.includes("listhangar") ||
+              router.asPath.includes("abouthangar") ||
+              router.asPath.includes("hangarlocation") ? null : (
+                <Link href="/listhangar">
+                  <button className="hidden md:block px-3 py-1 hover:bg-gray-100 text-sm font-medium cursor-pointer whitespace-nowrap text-[#000000]">
+                    List a hanger
+                  </button>
+                </Link>
+              )}
+            </div>
+
+            {router.asPath === "/hangarlocation" && (
+              <button
+                class="justify-between whitespace-nowrap mx-2 md:text-base text-sm md:w-32 mr-4 h-[38px] border  px-4 border-[#A9A9A9] rounded-full cursor-pointer"
+                fdprocessedid="v7cm1"
+              >
+                Save &amp; exit
+              </button>
+            )}
+            <div className="hamber flex items-center gap-2 p-[4px] border-[1px] border-gray-400 rounded-[9999px]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 ml-1"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+                style={{}}
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+              <div className="logo ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5 text-[#00AEEF]"
-                  x="0px"
-                  y="0px"
-                  width="2"
-                  height="20"
-                  viewBox="0 0 47 47"
-                  fill="#fff"
-                  style={{ padding: "" }}
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="pt-1 w-7 h-7 bg-slate-500 text-white rounded-full"
                 >
-                  <path d="M 20.5 6 C 12.515556 6 6 12.515562 6 20.5 C 6 28.484438 12.515556 35 20.5 35 C 23.773158 35 26.788919 33.893018 29.220703 32.050781 L 38.585938 41.414062 A 2.0002 2.0002 0 1 0 41.414062 38.585938 L 32.050781 29.220703 C 33.893017 26.788918 35 23.773156 35 20.5 C 35 12.515562 28.484444 6 20.5 6 z M 20.5 10 C 26.322685 10 31 14.677319 31 20.5 C 31 23.295711 29.914065 25.820601 28.148438 27.697266 A 2.0002 2.0002 0 0 0 27.701172 28.144531 C 25.824103 29.912403 23.29771 31 20.5 31 C 14.677315 31 10 26.322681 10 20.5 C 10 14.677319 14.677315 10 20.5 10 z"></path>
+                  <path
+                    fill-rule="evenodd"
+                    d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
+                    clip-rule="evenodd"
+                  ></path>
                 </svg>
               </div>
             </div>
           </div>
-        </div>
-        <div className="button flex justify-center items-center">
-          <div className="text hidden md:block px-3 py-1 hover:bg-gray-100 text-sm font-medium cursor-pointer">
-            { (router.asPath.includes("listhangar") || router.asPath.includes("abouthangar") || router.asPath.includes("hangarlocation")) ? null:
-              <Link href="/listhangar">
-                <button className="hidden md:block px-3 py-1 hover:bg-gray-100 text-sm font-medium cursor-pointer whitespace-nowrap text-[#000000]">
-                  List a hanger
-                </button>
-              </Link>
-            }
-          </div>
-          <div className="hamber flex items-center gap-2 p-[4px] border-[1px] border-gray-400 rounded-[9999px]">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 ml-1"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-              style={{}}
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M4 6h16M4 12h16M4 18h16"
-              ></path>
-            </svg>
-            <div className="logo ">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                class="pt-1 w-7 h-7 bg-slate-500 text-white rounded-full"
+          {open && (
+            <div className="hamber-item bg-white shadow-xl z-50 w-[100%] rounded-[4px] absolute top-13 right-0">
+              <p
+                onClick={() => router.push("/as")}
+                id="popup"
+                class="text-sm p-2"
               >
-                <path
-                  fill-rule="evenodd"
-                  d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
+                Home
+              </p>
+              <p class="text-sm p-2">My Favorites</p>
+              <p class="text-sm p-2">Messenger</p>
+              <p class="text-sm p-2">Help desk</p>
+              <p class="text-sm p-2">Logout</p>
             </div>
-          </div>
+          )}
         </div>
       </nav>
     </div>

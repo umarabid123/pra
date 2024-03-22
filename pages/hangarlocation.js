@@ -4,7 +4,7 @@ import Link from "next/link";
 const Location = () => {
   return (
     <div className="container">
-      <div className="location-container mb-16">
+      <div className="location-container mb-20">
         <div className="location-txt px-[20px] mb-4">
           <h1 class="w-full text-center text-2xl font-semibold sm:font-bold px-6 sm:px-0">
             Where is your hangar located?
@@ -14,14 +14,30 @@ const Location = () => {
             until a reservation has been made.
           </div>
         </div>
-        <div className="location-container-item lg:px-[56px] flex flex-col items-center">
-          <img src="./images/location.webp" alt="" className="rounded-md" />
+        <div className="location-container-item lg:px-[56px] flex flex-col lg:flex-row  lg:gap-6 xl:gap-8 lg:justify-center items-center lg:items-start">
+          <img src="./images/location.webp" alt="" className="rounded-md w-full lg:w-[70%] xl:w-[60%] h-[400px] overflow-hidden" />
           <form action="">
-            <div className="form self-start">
+            <div className="form self-start lg:w-[48%]">
               <div class=" p-0.5 font-bold text-left">
                 Airport Identifier <span class="text-[#00aeef] text-sm">*</span>
               </div>
-              <input type="text" placeholder="Select Airport" className="border-[1px] w-[100%] border-gray-900" />
+              <input type="text" placeholder="Select Airport" className="border-[1px] outline-[#00aeef] w-[300px] md:w-[640px] lg:w-[300px] xl:w-[350px] p-2 rounded-[4px] border-gray-300" />
+              <div class=" p-0.5 font-bold text-left mt-3">
+                Address<span class="text-[#00aeef] text-sm">*</span>
+              </div>
+              <input type="text" placeholder="Hanger Address" className="border-[1px] outline-none w-[300px] md:w-[640px] lg:w-[300px] xl:w-[350px] p-2 rounded-[4px] border-gray-300" />
+              <div class=" p-0.5 font-bold text-left mt-3">
+                City<span class="text-[#00aeef] text-sm">*</span>
+              </div>
+              <input type="text" placeholder="City" className="border-[1px] lg:w-[300px] outline-none w-[300px] md:w-[640px] xl:w-[350px] p-2 rounded-[4px] border-gray-300" />
+              <div class=" p-0.5 font-bold text-left mt-3">
+                State<span class="text-[#00aeef] text-sm">*</span>
+              </div>
+              <input type="text" placeholder="State" className="border-[1px] lg:w-[300px] outline-none w-[300px] md:w-[640px] xl:w-[350px] p-2 rounded-[4px] border-gray-300" />
+              <div class=" p-0.5 font-bold text-left mt-3">
+                Zip Code<span class="text-[#00aeef] text-sm">*</span>
+              </div>
+              <input type="text" placeholder="Zip Code" className="border-[1px] lg:w-[300px] outline-none w-[300px] md:w-[640px] xl:w-[350px] p-2 rounded-[4px] border-gray-300" />
             </div>
           </form>
         </div>
@@ -47,14 +63,14 @@ const Location = () => {
               Back
             </button>
           </Link>
-          <Link href="/hangarlocation">
+          <Link href="/hangardescription">
             <button
               type="submit"
               class="disabled:bg-opacity-50 bold sm:p-2 outline-none z-0 px-6 select-none sm:w-24 h-10 border-l border rounded-full bg-[#00aeef] text-white !cursor-pointer"
             >
               Next
             </button>
-          </Link>
+            </Link>
         </div>
       </div>
     </div>
