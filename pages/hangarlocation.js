@@ -21,7 +21,7 @@ const Location = () => {
               <div class=" p-0.5 font-bold text-left">
                 Airport Identifier <span class="text-[#00aeef] text-sm">*</span>
               </div>
-              <input type="text" placeholder="Select Airport" className="border-[1px] w-[100%   ] border-gray-900" />
+              <input type="text" placeholder="Select Airport" className="border-[1px] w-[100%] border-gray-900" />
             </div>
           </form>
         </div>
