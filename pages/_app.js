@@ -9,6 +9,6 @@ export default function App({ Component, pageProps }) {
   return <>
         <Header />
   <Component {...pageProps} />
- {(router.asPath.includes("abouthangar") || router.asPath.includes("hangarlocation")  )? null: <Footer />}
+ {(router.asPath.includes("abouthangar") || router.asPath.includes("hangarlocation") || router.asPath.includes("hangardescription"))? null: <Footer />}
   </>
 }
