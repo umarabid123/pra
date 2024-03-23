@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Link from "next/link";
 
-const Checkin = () => {
+const Addimage = () => {
   return (
     <div className="wrapper px-[20px] lg:px-[56px] mb-20">
       <div className="container ">
@@ -14,7 +14,7 @@ const Checkin = () => {
           </div>
         </div>
         <div className="img-section flex flex-col items-center">
-          <div className="border-2 border-dashed border-gray-300 flex flex-col items-center justify-center rounded-[3rem] w-[19rem] h-[15rem] sm:w-[36rem] sm:h-[19rem]">
+          <div className="border-2 border-dashed border-gray-300 flex flex-col items-center justify-center gap-3 rounded-[3rem] w-[19rem] h-[15rem] sm:w-[36rem] sm:h-[19rem]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="70  "
@@ -59,7 +59,7 @@ const Checkin = () => {
             </div>
           </div>
           <div className="btn flex justify-end gap-2 px-[20px] py-2">
-            <Link href="/hangardimensiondoor">
+            <Link href="/hangarcheckin">
               <button
                 type="submit"
                 class="disabled:bg-opacity-50 font-normal flex items-center justify-center text-[16px] sm:p-2 outline-none z-0 px-6 select-none sm:w-24 h-10 border-l border rounded-full bg-[#0aeef] border-1 border-[#00aeef] text-[#00aeef] !cursor-pointer"
@@ -67,7 +67,7 @@ const Checkin = () => {
                 Back
               </button>
             </Link>
-            <Link href="/hangarcheckin">
+            <Link href="/hangarprice">
               <button
                 type="submit"
                 class="disabled:bg-opacity-50 font-normal flex items-center justify-center sm:p-2 outline-none z-0 text-[16px] px-6 select-none sm:w-24 h-10 border-l border rounded-full bg-[#00aeef] text-white !cursor-pointer"
@@ -81,4 +81,4 @@ const Checkin = () => {
     </div>
   );
 };
-export default Checkin;
+export default Addimage;
