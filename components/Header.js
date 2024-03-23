@@ -50,7 +50,7 @@ const Header = () => {
             </g>
           </svg>
         </div>
-        {(router.asPath.includes("hangarlocation") || router.asPath.includes("hangardescription") || router.asPath.includes("hangardimension"))? null : (
+        {(router.asPath.includes("hangarlocation") || router.asPath.includes("hangardescription") || router.asPath.includes("hangardimension") || router.asPath.includes("hangarcheckin"))? null : (
           <div className="item-2 md:bg-white md:shadow-md md:border md:min-h-[50px] rounded-full md:flex md:items-center md:py-1 md:px-2.5">
             <div className="search ">
               <div class="flex items-center  text-gray-500 text-xs 2xl:text-lg">
@@ -91,7 +91,7 @@ const Header = () => {
             <div className="text hidden md:block px-3 py-1 hover:bg-gray-100 text-sm font-medium cursor-pointer">
               {router.asPath.includes("listhangar") ||
               router.asPath.includes("abouthangar") ||
-              router.asPath.includes("hangarlocation") || router.asPath.includes("hangardescription") || router.asPath.includes("hangardimension")? null : (
+              router.asPath.includes("hangarlocation") || router.asPath.includes("hangardescription") || router.asPath.includes("hangardimension") | router.asPath.includes("hangardescription") || router.asPath.includes("hangarcheckin")? null : (
                 <Link href="/listhangar">
                   <button className="hidden md:block px-3 py-1 hover:bg-gray-100 text-sm font-medium cursor-pointer whitespace-nowrap text-[#000000]">
                     List a hanger
@@ -100,7 +100,7 @@ const Header = () => {
               )}
             </div>
 
-            {router.asPath === "/hangarlocation" || router.asPath === "/hangardescription" || router.asPath === "/hangardimension" && (
+            {router.asPath === "/hangarlocation" || router.asPath === "/hangardescription" || router.asPath === "/hangardimension" || router.asPath === "/hangarcheckin" && (
               <button
                 class="justify-between whitespace-nowrap mx-2 md:text-base text-sm md:w-32 mr-4 h-[38px] border  px-4 border-[#A9A9A9] rounded-full cursor-pointer"
                 fdprocessedid="v7cm1"
