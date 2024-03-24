@@ -3,46 +3,573 @@ import Link from "next/link";
 
 const Amienities = () => {
   return (
-    <div className="wrapper px-[20px] lg:px-[56px] mb-20">
-      <div className="container ">
-        <div className="heading flex flex-col mb-4">
-          <h1 class="w-full text-center text-2xl font-semibold md:font-bold">
-            Available Amenities
-          </h1>
-          <div class="undefined font-normal text-sm text-center w-full  text-[#737373] pt-3">
-            Select available hangar amenities.
+    <div className="wrapper px-[20px] lg:px-[80px] mb-20">
+      <div className="container flex flex-col items-center">
+        <div className="items w-[92%] flex flex-col gap-10">
+          <div className="heading flex flex-col mb-4">
+            <h1 class="w-full text-center text-2xl font-semibold md:font-bold">
+              Available Amenities
+            </h1>
+            <div class="undefined font-normal text-sm text-center w-full  text-[#737373] pt-3">
+              Select available hangar amenities.
+            </div>
           </div>
-        </div>
-        <div
-          id="popup"
-          class="flex cursor-pointer justify-between items-center bg-white false !h-14 relative border px-4  rounded-md !min-h-[45px] mb-4 sm:mb-0 w-full  sm:min-w-[250px] "
-        >
-          <div id="popup" class="flex false items-center gap-1.5 ">
-            <input
-              type="checkbox"
-              class="!w-[14px] h-[14px] outline-none text-blue-600 pl-5 cursor-pointer bg-gray-100 border-gray-300 rounded "
-            />
-            <div class="!text-xs">
-              <div id="popup" class="iconSize  cursor-pointer !text-[#222222]">
-                <svg
-                  viewBox="0 0 32 32"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                  role="presentation"
-                  focusable="false"
-                  className="fill-black w-[24px] h-[24px]"
+          <div className="all-items">
+          <label class="text-sm text-left mr-auto font-bold"> Select available amenities (optional)</label>
+          <div className="all-popup flex gap-1 md:gap-10 lg:gap-12 flex-wrap mt-3 sm:mt-6">
+            <div class="flex cursor-pointer justify-between items-center bg-white false !h-14 relative border px-4  rounded-md !min-h-[45px] mb-4 sm:mb-0 w-full  md:min-w-[23%] md:max-w-[29%] xl:min-w-[21%] xl:max-w-[21.7%]"
+              id="popup"
+            >
+              <div id="popup" class="flex false items-center gap-1.5 ">
+                <input
+                  type="checkbox"
+                  class="!w-[14px] h-[14px] outline-none text-blue-600 pl-5 cursor-pointer bg-gray-100 border-gray-300 rounded "
+                />
+                <div class="!text-xs">
+                  <div
+                    id="popup"
+                    class="iconSize  cursor-pointer !text-[#222222]"
+                  >
+                    <svg
+                      viewBox="0 0 32 32"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      role="presentation"
+                      focusable="false"
+                      className="fill-black w-[24px] h-[24px]"
+                    >
+                      <path d="m15.9999 20.33323c2.0250459 0 3.66667 1.6416241 3.66667 3.66667s-1.6416241 3.66667-3.66667 3.66667-3.66667-1.6416241-3.66667-3.66667 1.6416241-3.66667 3.66667-3.66667zm0 2c-.9204764 0-1.66667.7461936-1.66667 1.66667s.7461936 1.66667 1.66667 1.66667 1.66667-.7461936 1.66667-1.66667-.7461936-1.66667-1.66667-1.66667zm.0001-7.33323c3.5168171 0 6.5625093 2.0171251 8.0432368 4.9575354l-1.5143264 1.5127043c-1.0142061-2.615688-3.5549814-4.4702397-6.5289104-4.4702397s-5.5147043 1.8545517-6.52891042 4.4702397l-1.51382132-1.5137072c1.48091492-2.939866 4.52631444-4.9565325 8.04273174-4.9565325zm.0001-5.3332c4.9804693 0 9.3676401 2.540213 11.9365919 6.3957185l-1.4470949 1.4473863c-2.1746764-3.5072732-6.0593053-5.8431048-10.489497-5.8431048s-8.31482064 2.3358316-10.48949703 5.8431048l-1.44709488-1.4473863c2.56895177-3.8555055 6.95612261-6.3957185 11.93659191-6.3957185zm-.0002-5.3336c6.4510616 0 12.1766693 3.10603731 15.7629187 7.9042075l-1.4304978 1.4309874c-3.2086497-4.44342277-8.4328305-7.3351949-14.3324209-7.3351949-5.8991465 0-11.12298511 2.89133703-14.33169668 7.334192l-1.43047422-1.4309849c3.58629751-4.79760153 9.31155768-7.9032071 15.7621709-7.9032071z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <label
+                  id="popup"
+                  class="cursor-pointer text-[12px] pl-1 font-medium select-none !text-[#222222] "
                 >
-                  <path d="m15.9999 20.33323c2.0250459 0 3.66667 1.6416241 3.66667 3.66667s-1.6416241 3.66667-3.66667 3.66667-3.66667-1.6416241-3.66667-3.66667 1.6416241-3.66667 3.66667-3.66667zm0 2c-.9204764 0-1.66667.7461936-1.66667 1.66667s.7461936 1.66667 1.66667 1.66667 1.66667-.7461936 1.66667-1.66667-.7461936-1.66667-1.66667-1.66667zm.0001-7.33323c3.5168171 0 6.5625093 2.0171251 8.0432368 4.9575354l-1.5143264 1.5127043c-1.0142061-2.615688-3.5549814-4.4702397-6.5289104-4.4702397s-5.5147043 1.8545517-6.52891042 4.4702397l-1.51382132-1.5137072c1.48091492-2.939866 4.52631444-4.9565325 8.04273174-4.9565325zm.0001-5.3332c4.9804693 0 9.3676401 2.540213 11.9365919 6.3957185l-1.4470949 1.4473863c-2.1746764-3.5072732-6.0593053-5.8431048-10.489497-5.8431048s-8.31482064 2.3358316-10.48949703 5.8431048l-1.44709488-1.4473863c2.56895177-3.8555055 6.95612261-6.3957185 11.93659191-6.3957185zm-.0002-5.3336c6.4510616 0 12.1766693 3.10603731 15.7629187 7.9042075l-1.4304978 1.4309874c-3.2086497-4.44342277-8.4328305-7.3351949-14.3324209-7.3351949-5.8991465 0-11.12298511 2.89133703-14.33169668 7.334192l-1.43047422-1.4309849c3.58629751-4.79760153 9.31155768-7.9032071 15.7621709-7.9032071z"></path>
-                </svg>
+                  WiFi
+                </label>
               </div>
             </div>
-            <label
+            <div class="flex cursor-pointer justify-between items-center bg-white false !h-14 relative border px-4  rounded-md !min-h-[45px] mb-4 sm:mb-0 w-full  md:min-w-[23%] md:max-w-[29%] xl:min-w-[21%] xl:max-w-[21.7%] "
               id="popup"
-              class="cursor-pointer text-[12px] pl-1 font-medium select-none !text-[#222222] "
             >
-              WiFi
-            </label>
-          </div>
+              <div id="popup" class="flex false items-center gap-1.5 ">
+                <input type="checkbox" />
+                <div class="!text-xs">
+                  <div
+                    id="popup"
+                    class="iconSize  cursor-pointer !text-[#222222]"
+                  >
+                    <svg
+                      viewBox="0 0 32 32"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      role="presentation"
+                      focusable="false"
+                      className="w-[24px] h-[24px] fill-black"
+                    >
+                      <path d="M26 1a5 5 0 0 1 5 5c0 6.389-1.592 13.187-4 14.693V31h-2V20.694c-2.364-1.478-3.942-8.062-3.998-14.349L21 6l.005-.217A5 5 0 0 1 26 1zm-9 0v18.118c2.317.557 4 3.01 4 5.882 0 3.27-2.183 6-5 6s-5-2.73-5-6c0-2.872 1.683-5.326 4-5.882V1zM2 1h1c4.47 0 6.934 6.365 6.999 18.505L10 21H3.999L4 31H2zm14 20c-1.602 0-3 1.748-3 4s1.398 4 3 4 3-1.748 3-4-1.398-4-3-4zM4 3.239V19h3.995l-.017-.964-.027-.949C7.673 9.157 6.235 4.623 4.224 3.364l-.12-.07zm19.005 2.585L23 6l.002.31c.045 4.321 1.031 9.133 1.999 11.39V3.17a3.002 3.002 0 0 0-1.996 2.654zm3.996-2.653v14.526C27.99 15.387 29 10.4 29 6a3.001 3.001 0 0 0-2-2.829z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <label
+                  id="popup"
+                  class="cursor-pointer text-[12px] pl-1 font-medium select-none !text-[#222222] "
+                >
+                  Kitchen
+                </label>
+              </div>
+            </div>
+            <div class="flex cursor-pointer justify-between items-center bg-white false !h-14 relative border px-4  rounded-md !min-h-[45px] mb-4 sm:mb-0 w-full  md:min-w-[23%] md:max-w-[29%] xl:min-w-[21%] xl:max-w-[21.7%] "
+              id="popup"
+            >
+              <div id="popup" class="flex false items-center gap-1.5 ">
+                <input
+                  type="text"
+                  class="!w-[14px] h-[14px] outline-none text-blue-600 pl-5 cursor-pointer bg-gray-100 border-gray-300 rounded"
+                />
+                <div class="!text-xs">
+                  <div
+                    id="popup"
+                    class="iconSize  cursor-pointer !text-[#222222]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 32 32"
+                      aria-hidden="true"
+                      role="presentation"
+                      focusable="false"
+                      className="w-[24px] h-[24px]"
+                    >
+                      <path d="M26 19a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM7 18a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm20.693-5l.42 1.119C29.253 15.036 30 16.426 30 18v9c0 1.103-.897 2-2 2h-2c-1.103 0-2-.897-2-2v-2H8v2c0 1.103-.897 2-2 2H4c-1.103 0-2-.897-2-2v-9c0-1.575.746-2.965 1.888-3.882L4.308 13H2v-2h3v.152l1.82-4.854A2.009 2.009 0 0 1 8.693 5h14.614c.829 0 1.58.521 1.873 1.297L27 11.151V11h3v2h-2.307zM6 25H4v2h2v-2zm22 0h-2v2h2v-2zm0-2v-5c0-1.654-1.346-3-3-3H7c-1.654 0-3 1.346-3 3v5h24zm-3-10h.557l-2.25-6H8.693l-2.25 6H25zm-15 7h12v-2H10v2z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <label
+                  id="popup"
+                  class="cursor-pointer text-[12px] pl-1 font-medium select-none !text-[#222222] "
+                >
+                  Rental Car Service
+                </label>
+              </div>
+            </div>
+            <div class="flex cursor-pointer justify-between items-center bg-white false !h-14 relative border px-4  rounded-md !min-h-[45px] mb-4 sm:mb-0 w-full  md:min-w-[23%] md:max-w-[29%] xl:min-w-[21%] xl:max-w-[21.7%] "
+            >
+              <div id="popup" class="flex false items-center gap-1.5 ">
+                <input
+                  type="checkbox"
+                  class="!w-[14px] h-[14px] outline-none text-blue-600 pl-5 cursor-pointer bg-gray-100 border-gray-300 rounded "
+                />
+                <div class="!text-xs">
+                  <div
+                    id="popup"
+                    class="iconSize  cursor-pointer !text-[#222222]"
+                  >
+                    <svg
+                      viewBox="0 0 32 32"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      role="presentation"
+                      focusable="false"
+                      className="w-[24px] h-[24px]"
+                    >
+                      <path d="M7.5 2a4.5 4.5 0 0 1 4.473 4H14v2H8V6h1.95a2.5 2.5 0 0 0-4.945.336L5 6.5V16h26v2h-2v5a5.001 5.001 0 0 1-3 4.584V30h-2v-2H8v2H6v-2.416a5.002 5.002 0 0 1-2.995-4.349L3 23v-5H1v-2h2V6.5A4.5 4.5 0 0 1 7.5 2zm19.499 16h-22L5 23a3 3 0 0 0 2.65 2.98l.174.015L8 26h16a3 3 0 0 0 2.995-2.824L27 23z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <label
+                  id="popup"
+                  class="cursor-pointer text-[12px] pl-1 font-medium select-none !text-[#222222] "
+                >
+                  Restroom
+                </label>
+              </div>
+            </div>
+            <div class="flex cursor-pointer justify-between items-center bg-white false !h-14 relative border px-4  rounded-md !min-h-[45px] mb-4 sm:mb-0 w-full  md:min-w-[23%] md:max-w-[29%] xl:min-w-[21%] xl:max-w-[21.7%] "
+            >
+              <div id="popup" class="flex false items-center gap-1.5 ">
+                <input
+                  type="checkbox"
+                  class="!w-[14px] h-[14px] outline-none text-blue-600 pl-5 cursor-pointer bg-gray-100 border-gray-300 rounded "
+                />
+                <div class="!text-xs">
+                  <div
+                    id="popup"
+                    class="iconSize  cursor-pointer !text-[#222222]"
+                  >
+                    <svg
+                      viewBox="0 0 32 32"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      role="presentation"
+                      focusable="false"
+                      className="w-[24px] h-[24px]"
+                    >
+                      <path d="M23 3a2 2 0 0 1 1.995 1.85L25 5v1.522l5-1.999v11.954l-5-2V16a2 2 0 0 1-1.85 1.995L23 18l-6.1.001a5.005 5.005 0 0 1-3.984 3.915 5.002 5.002 0 0 1-4.7 4.08L8 26H4v4H2V20h2v4h4a3.001 3.001 0 0 0 2.872-2.13A5.004 5.004 0 0 1 7.1 18.002L4 18a2 2 0 0 1-1.995-1.85L2 16V5a2 2 0 0 1 1.85-1.995L4 3zM12 14a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm11-9H4v11h3.1a5.002 5.002 0 0 1 9.8 0H23zm5 2.476l-3 1.2v3.647l3 1.2zM7 7a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <label
+                  id="popup"
+                  class="cursor-pointer text-[12px] pl-1 font-medium select-none !text-[#222222] "
+                >
+                  Security Cameras
+                </label>
+              </div>
+            </div>
+            <div class="flex cursor-pointer justify-between items-center bg-white false !h-14 relative border px-4  rounded-md !min-h-[45px] mb-4 sm:mb-0 w-full  md:min-w-[23%] md:max-w-[29%] xl:min-w-[21%] xl:max-w-[21.7%] "
+            >
+              <div id="popup" class="flex false items-center gap-1.5 ">
+                <input
+                  type="checkbox"
+                  class="!w-[14px] h-[14px] outline-none text-blue-600 pl-5 cursor-pointer bg-gray-100 border-gray-300 rounded "
+                />
+                <div class="!text-xs">
+                  <div
+                    id="popup"
+                    class="iconSize  cursor-pointer !text-[#222222]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="#000000"
+                      viewBox="0 0 1024 1024"
+                      className="w-[24px] h-[24px]"
+                    >
+                      <path d="M522.267 910.508c16.962 0 30.72-13.758 30.72-30.72v-736.43c0-16.962-13.758-30.72-30.72-30.72H143.356c-16.962 0-30.72 13.758-30.72 30.72v736.43c0 16.962 13.758 30.72 30.72 30.72h378.911zm0 40.96H143.356c-39.583 0-71.68-32.097-71.68-71.68v-736.43c0-39.583 32.097-71.68 71.68-71.68h378.911c39.583 0 71.68 32.097 71.68 71.68v736.43c0 39.583-32.097 71.68-71.68 71.68zm388.62-678.049v500.265c0 49.412-40.054 89.467-89.467 89.467-49.443 0-89.498-40.054-89.498-89.467 0-11.311-9.169-20.48-20.48-20.48s-20.48 9.169-20.48 20.48c0 72.034 58.393 130.427 130.427 130.427 72.065 0 130.458-58.393 130.458-130.427V273.419c0-11.311-9.169-20.48-20.48-20.48s-20.48 9.169-20.48 20.48z"></path>
+                      <path d="M731.92 779.436V368.648c0-11.311-9.169-20.48-20.48-20.48s-20.48 9.169-20.48 20.48v410.788c0 11.311 9.169 20.48 20.48 20.48s20.48-9.169 20.48-20.48z"></path>
+                      <path d="M731.943 365.513v-34.499c0-49.414-40.053-89.467-89.467-89.467-49.415 0-89.477 40.054-89.477 89.467v34.499c0 11.311 9.169 20.48 20.48 20.48s20.48-9.169 20.48-20.48v-34.499c0-26.789 21.722-48.507 48.517-48.507 26.792 0 48.507 21.715 48.507 48.507v34.499c0 11.311 9.169 20.48 20.48 20.48s20.48-9.169 20.48-20.48zM942.5 254.981L767.785 80.266c-7.998-7.998-20.965-7.998-28.963 0s-7.998 20.965 0 28.963l174.715 174.715c7.998 7.998 20.965 7.998 28.963 0s7.998-20.965 0-28.963zM438.84 281.52c5.657 0 10.24-4.583 10.24-10.24V225.2c0-5.657-4.583-10.24-10.24-10.24H225.541a10.238 10.238 0 00-10.24 10.24v46.08c0 5.657 4.583 10.24 10.24 10.24H438.84zm0 40.96H225.541c-28.278 0-51.2-22.922-51.2-51.2V225.2c0-28.278 22.922-51.2 51.2-51.2H438.84c28.278 0 51.2 22.922 51.2 51.2v46.08c0 28.278-22.922 51.2-51.2 51.2z"></path>
+                      <path d="M928.972 358.832h-48.978c-11.309 0-20.48-9.171-20.48-20.48V191.091c0-11.311-9.169-20.48-20.48-20.48s-20.48 9.169-20.48 20.48v147.261c0 33.931 27.509 61.44 61.44 61.44h48.978c11.311 0 20.48-9.169 20.48-20.48s-9.169-20.48-20.48-20.48z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <label
+                  id="popup"
+                  class="cursor-pointer text-[12px] pl-1 font-medium select-none !text-[#222222] "
+                >
+                  Jet-A Fuel
+                </label>
+              </div>
+            </div>
+            <div class="flex cursor-pointer justify-between items-center bg-white false !h-14 relative border px-4  rounded-md !min-h-[45px] mb-4 sm:mb-0 w-full  md:min-w-[23%] md:max-w-[29%] xl:min-w-[21%] xl:max-w-[21.7%] "
+            >
+              <div id="popup" class="flex false items-center gap-1.5 ">
+                <input
+                  type="checkbox"
+                  class="!w-[14px] h-[14px] outline-none text-blue-600 pl-5 cursor-pointer bg-gray-100 border-gray-300 rounded "
+                />
+                <div class="!text-xs">
+                  <div
+                    id="popup"
+                    class="iconSize  cursor-pointer !text-[#222222]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="#000000"
+                      viewBox="0 0 1024 1024"
+                      className="w-[24px] h-[24px]"
+                    >
+                      <path d="M522.267 910.508c16.962 0 30.72-13.758 30.72-30.72v-736.43c0-16.962-13.758-30.72-30.72-30.72H143.356c-16.962 0-30.72 13.758-30.72 30.72v736.43c0 16.962 13.758 30.72 30.72 30.72h378.911zm0 40.96H143.356c-39.583 0-71.68-32.097-71.68-71.68v-736.43c0-39.583 32.097-71.68 71.68-71.68h378.911c39.583 0 71.68 32.097 71.68 71.68v736.43c0 39.583-32.097 71.68-71.68 71.68zm388.62-678.049v500.265c0 49.412-40.054 89.467-89.467 89.467-49.443 0-89.498-40.054-89.498-89.467 0-11.311-9.169-20.48-20.48-20.48s-20.48 9.169-20.48 20.48c0 72.034 58.393 130.427 130.427 130.427 72.065 0 130.458-58.393 130.458-130.427V273.419c0-11.311-9.169-20.48-20.48-20.48s-20.48 9.169-20.48 20.48z"></path>
+                      <path d="M731.92 779.436V368.648c0-11.311-9.169-20.48-20.48-20.48s-20.48 9.169-20.48 20.48v410.788c0 11.311 9.169 20.48 20.48 20.48s20.48-9.169 20.48-20.48z"></path>
+                      <path d="M731.943 365.513v-34.499c0-49.414-40.053-89.467-89.467-89.467-49.415 0-89.477 40.054-89.477 89.467v34.499c0 11.311 9.169 20.48 20.48 20.48s20.48-9.169 20.48-20.48v-34.499c0-26.789 21.722-48.507 48.517-48.507 26.792 0 48.507 21.715 48.507 48.507v34.499c0 11.311 9.169 20.48 20.48 20.48s20.48-9.169 20.48-20.48zM942.5 254.981L767.785 80.266c-7.998-7.998-20.965-7.998-28.963 0s-7.998 20.965 0 28.963l174.715 174.715c7.998 7.998 20.965 7.998 28.963 0s7.998-20.965 0-28.963zM438.84 281.52c5.657 0 10.24-4.583 10.24-10.24V225.2c0-5.657-4.583-10.24-10.24-10.24H225.541a10.238 10.238 0 00-10.24 10.24v46.08c0 5.657 4.583 10.24 10.24 10.24H438.84zm0 40.96H225.541c-28.278 0-51.2-22.922-51.2-51.2V225.2c0-28.278 22.922-51.2 51.2-51.2H438.84c28.278 0 51.2 22.922 51.2 51.2v46.08c0 28.278-22.922 51.2-51.2 51.2z"></path>
+                      <path d="M928.972 358.832h-48.978c-11.309 0-20.48-9.171-20.48-20.48V191.091c0-11.311-9.169-20.48-20.48-20.48s-20.48 9.169-20.48 20.48v147.261c0 33.931 27.509 61.44 61.44 61.44h48.978c11.311 0 20.48-9.169 20.48-20.48s-9.169-20.48-20.48-20.48z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <label
+                  id="popup"
+                  class="cursor-pointer text-[12px] pl-1 font-medium select-none !text-[#222222] "
+                >
+                  Jet-A Fuel
+                </label>
+              </div>
+            </div>
+            <div class="flex cursor-pointer justify-between items-center bg-white false !h-14 relative border px-4  rounded-md !min-h-[45px] mb-4 sm:mb-0 w-full  md:min-w-[23%] md:max-w-[29%] xl:min-w-[21%] xl:max-w-[21.7%] "
+            >
+              <div id="popup" class="flex false items-center gap-1.5 ">
+                <input
+                  type="checkbox"
+                  class="!w-[14px] h-[14px] outline-none text-blue-600 pl-5 cursor-pointer bg-gray-100 border-gray-300 rounded "
+                />
+                <div class="!text-xs">
+                  <div
+                    id="popup"
+                    class="iconSize  cursor-pointer !text-[#222222]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="#000000"
+                      viewBox="0 0 1024 1024"
+                      className="w-[24px] h-[24px]"
+                    >
+                      <path d="M522.267 910.508c16.962 0 30.72-13.758 30.72-30.72v-736.43c0-16.962-13.758-30.72-30.72-30.72H143.356c-16.962 0-30.72 13.758-30.72 30.72v736.43c0 16.962 13.758 30.72 30.72 30.72h378.911zm0 40.96H143.356c-39.583 0-71.68-32.097-71.68-71.68v-736.43c0-39.583 32.097-71.68 71.68-71.68h378.911c39.583 0 71.68 32.097 71.68 71.68v736.43c0 39.583-32.097 71.68-71.68 71.68zm388.62-678.049v500.265c0 49.412-40.054 89.467-89.467 89.467-49.443 0-89.498-40.054-89.498-89.467 0-11.311-9.169-20.48-20.48-20.48s-20.48 9.169-20.48 20.48c0 72.034 58.393 130.427 130.427 130.427 72.065 0 130.458-58.393 130.458-130.427V273.419c0-11.311-9.169-20.48-20.48-20.48s-20.48 9.169-20.48 20.48z"></path>
+                      <path d="M731.92 779.436V368.648c0-11.311-9.169-20.48-20.48-20.48s-20.48 9.169-20.48 20.48v410.788c0 11.311 9.169 20.48 20.48 20.48s20.48-9.169 20.48-20.48z"></path>
+                      <path d="M731.943 365.513v-34.499c0-49.414-40.053-89.467-89.467-89.467-49.415 0-89.477 40.054-89.477 89.467v34.499c0 11.311 9.169 20.48 20.48 20.48s20.48-9.169 20.48-20.48v-34.499c0-26.789 21.722-48.507 48.517-48.507 26.792 0 48.507 21.715 48.507 48.507v34.499c0 11.311 9.169 20.48 20.48 20.48s20.48-9.169 20.48-20.48zM942.5 254.981L767.785 80.266c-7.998-7.998-20.965-7.998-28.963 0s-7.998 20.965 0 28.963l174.715 174.715c7.998 7.998 20.965 7.998 28.963 0s7.998-20.965 0-28.963zM438.84 281.52c5.657 0 10.24-4.583 10.24-10.24V225.2c0-5.657-4.583-10.24-10.24-10.24H225.541a10.238 10.238 0 00-10.24 10.24v46.08c0 5.657 4.583 10.24 10.24 10.24H438.84zm0 40.96H225.541c-28.278 0-51.2-22.922-51.2-51.2V225.2c0-28.278 22.922-51.2 51.2-51.2H438.84c28.278 0 51.2 22.922 51.2 51.2v46.08c0 28.278-22.922 51.2-51.2 51.2z"></path>
+                      <path d="M928.972 358.832h-48.978c-11.309 0-20.48-9.171-20.48-20.48V191.091c0-11.311-9.169-20.48-20.48-20.48s-20.48 9.169-20.48 20.48v147.261c0 33.931 27.509 61.44 61.44 61.44h48.978c11.311 0 20.48-9.169 20.48-20.48s-9.169-20.48-20.48-20.48z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <label
+                  id="popup"
+                  class="cursor-pointer text-[12px] pl-1 font-medium select-none !text-[#222222] "
+                >
+                  Jet-A Fuel
+                </label>
+              </div>
+            </div>
+            <div class="flex cursor-pointer justify-between items-center bg-white false !h-14 relative border px-4  rounded-md !min-h-[45px] mb-4 sm:mb-0 w-full  md:min-w-[23%] md:max-w-[29%] xl:min-w-[21%] xl:max-w-[21.7%]"
+              id="popup"
+            >
+              <div id="popup" class="flex false items-center gap-1.5 ">
+                <input
+                  type="checkbox"
+                  class="!w-[14px] h-[14px] outline-none text-blue-600 pl-5 cursor-pointer bg-gray-100 border-gray-300 rounded "
+                />
+                <div class="!text-xs">
+                  <div
+                    id="popup"
+                    class="iconSize  cursor-pointer !text-[#222222]"
+                  >
+                    <svg
+                      viewBox="0 0 32 32"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      role="presentation"
+                      focusable="false"
+                      className="fill-black w-[24px] h-[24px]"
+                    >
+                      <path d="m15.9999 20.33323c2.0250459 0 3.66667 1.6416241 3.66667 3.66667s-1.6416241 3.66667-3.66667 3.66667-3.66667-1.6416241-3.66667-3.66667 1.6416241-3.66667 3.66667-3.66667zm0 2c-.9204764 0-1.66667.7461936-1.66667 1.66667s.7461936 1.66667 1.66667 1.66667 1.66667-.7461936 1.66667-1.66667-.7461936-1.66667-1.66667-1.66667zm.0001-7.33323c3.5168171 0 6.5625093 2.0171251 8.0432368 4.9575354l-1.5143264 1.5127043c-1.0142061-2.615688-3.5549814-4.4702397-6.5289104-4.4702397s-5.5147043 1.8545517-6.52891042 4.4702397l-1.51382132-1.5137072c1.48091492-2.939866 4.52631444-4.9565325 8.04273174-4.9565325zm.0001-5.3332c4.9804693 0 9.3676401 2.540213 11.9365919 6.3957185l-1.4470949 1.4473863c-2.1746764-3.5072732-6.0593053-5.8431048-10.489497-5.8431048s-8.31482064 2.3358316-10.48949703 5.8431048l-1.44709488-1.4473863c2.56895177-3.8555055 6.95612261-6.3957185 11.93659191-6.3957185zm-.0002-5.3336c6.4510616 0 12.1766693 3.10603731 15.7629187 7.9042075l-1.4304978 1.4309874c-3.2086497-4.44342277-8.4328305-7.3351949-14.3324209-7.3351949-5.8991465 0-11.12298511 2.89133703-14.33169668 7.334192l-1.43047422-1.4309849c3.58629751-4.79760153 9.31155768-7.9032071 15.7621709-7.9032071z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <label
+                  id="popup"
+                  class="cursor-pointer text-[12px] pl-1 font-medium select-none !text-[#222222] "
+                >
+                  WiFi
+                </label>
+              </div>
+            </div>
+            <div class="flex cursor-pointer justify-between items-center bg-white false !h-14 relative border px-4  rounded-md !min-h-[45px] mb-4 sm:mb-0 w-full  md:min-w-[23%] md:max-w-[29%] xl:min-w-[21%] xl:max-w-[21.7%] "
+              id="popup"
+            >
+              <div id="popup" class="flex false items-center gap-1.5 ">
+                <input type="checkbox" />
+                <div class="!text-xs">
+                  <div
+                    id="popup"
+                    class="iconSize  cursor-pointer !text-[#222222]"
+                  >
+                    <svg
+                      viewBox="0 0 32 32"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      role="presentation"
+                      focusable="false"
+                      className="w-[24px] h-[24px] fill-black"
+                    >
+                      <path d="M26 1a5 5 0 0 1 5 5c0 6.389-1.592 13.187-4 14.693V31h-2V20.694c-2.364-1.478-3.942-8.062-3.998-14.349L21 6l.005-.217A5 5 0 0 1 26 1zm-9 0v18.118c2.317.557 4 3.01 4 5.882 0 3.27-2.183 6-5 6s-5-2.73-5-6c0-2.872 1.683-5.326 4-5.882V1zM2 1h1c4.47 0 6.934 6.365 6.999 18.505L10 21H3.999L4 31H2zm14 20c-1.602 0-3 1.748-3 4s1.398 4 3 4 3-1.748 3-4-1.398-4-3-4zM4 3.239V19h3.995l-.017-.964-.027-.949C7.673 9.157 6.235 4.623 4.224 3.364l-.12-.07zm19.005 2.585L23 6l.002.31c.045 4.321 1.031 9.133 1.999 11.39V3.17a3.002 3.002 0 0 0-1.996 2.654zm3.996-2.653v14.526C27.99 15.387 29 10.4 29 6a3.001 3.001 0 0 0-2-2.829z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <label
+                  id="popup"
+                  class="cursor-pointer text-[12px] pl-1 font-medium select-none !text-[#222222] "
+                >
+                  Kitchen
+                </label>
+              </div>
+            </div>
+            <div class="flex cursor-pointer justify-between items-center bg-white false !h-14 relative border px-4  rounded-md !min-h-[45px] mb-4 sm:mb-0 w-full  md:min-w-[23%] md:max-w-[29%] xl:min-w-[21%] xl:max-w-[21.7%] "
+              id="popup"
+            >
+              <div id="popup" class="flex false items-center gap-1.5 ">
+                <input
+                  type="text"
+                  class="!w-[14px] h-[14px] outline-none text-blue-600 pl-5 cursor-pointer bg-gray-100 border-gray-300 rounded"
+                />
+                <div class="!text-xs">
+                  <div
+                    id="popup"
+                    class="iconSize  cursor-pointer !text-[#222222]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 32 32"
+                      aria-hidden="true"
+                      role="presentation"
+                      focusable="false"
+                      className="w-[24px] h-[24px]"
+                    >
+                      <path d="M26 19a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM7 18a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm20.693-5l.42 1.119C29.253 15.036 30 16.426 30 18v9c0 1.103-.897 2-2 2h-2c-1.103 0-2-.897-2-2v-2H8v2c0 1.103-.897 2-2 2H4c-1.103 0-2-.897-2-2v-9c0-1.575.746-2.965 1.888-3.882L4.308 13H2v-2h3v.152l1.82-4.854A2.009 2.009 0 0 1 8.693 5h14.614c.829 0 1.58.521 1.873 1.297L27 11.151V11h3v2h-2.307zM6 25H4v2h2v-2zm22 0h-2v2h2v-2zm0-2v-5c0-1.654-1.346-3-3-3H7c-1.654 0-3 1.346-3 3v5h24zm-3-10h.557l-2.25-6H8.693l-2.25 6H25zm-15 7h12v-2H10v2z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <label
+                  id="popup"
+                  class="cursor-pointer text-[12px] pl-1 font-medium select-none !text-[#222222] "
+                >
+                  Rental Car Service
+                </label>
+              </div>
+            </div>
+            <div class="flex cursor-pointer justify-between items-center bg-white false !h-14 relative border px-4  rounded-md !min-h-[45px] mb-4 sm:mb-0 w-full  md:min-w-[23%] md:max-w-[29%] xl:min-w-[21%] xl:max-w-[21.7%] "
+            >
+              <div id="popup" class="flex false items-center gap-1.5 ">
+                <input
+                  type="checkbox"
+                  class="!w-[14px] h-[14px] outline-none text-blue-600 pl-5 cursor-pointer bg-gray-100 border-gray-300 rounded "
+                />
+                <div class="!text-xs">
+                  <div
+                    id="popup"
+                    class="iconSize  cursor-pointer !text-[#222222]"
+                  >
+                    <svg
+                      viewBox="0 0 32 32"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      role="presentation"
+                      focusable="false"
+                      className="w-[24px] h-[24px]"
+                    >
+                      <path d="M7.5 2a4.5 4.5 0 0 1 4.473 4H14v2H8V6h1.95a2.5 2.5 0 0 0-4.945.336L5 6.5V16h26v2h-2v5a5.001 5.001 0 0 1-3 4.584V30h-2v-2H8v2H6v-2.416a5.002 5.002 0 0 1-2.995-4.349L3 23v-5H1v-2h2V6.5A4.5 4.5 0 0 1 7.5 2zm19.499 16h-22L5 23a3 3 0 0 0 2.65 2.98l.174.015L8 26h16a3 3 0 0 0 2.995-2.824L27 23z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <label
+                  id="popup"
+                  class="cursor-pointer text-[12px] pl-1 font-medium select-none !text-[#222222] "
+                >
+                  Restroom
+                </label>
+              </div>
+            </div>
+            <div class="flex cursor-pointer justify-between items-center bg-white false !h-14 relative border px-4  rounded-md !min-h-[45px] mb-4 sm:mb-0 w-full  md:min-w-[23%] md:max-w-[29%] xl:min-w-[21%] xl:max-w-[21.7%] "
+            >
+              <div id="popup" class="flex false items-center gap-1.5 ">
+                <input
+                  type="checkbox"
+                  class="!w-[14px] h-[14px] outline-none text-blue-600 pl-5 cursor-pointer bg-gray-100 border-gray-300 rounded "
+                />
+                <div class="!text-xs">
+                  <div
+                    id="popup"
+                    class="iconSize  cursor-pointer !text-[#222222]"
+                  >
+                    <svg
+                      viewBox="0 0 32 32"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      role="presentation"
+                      focusable="false"
+                      className="w-[24px] h-[24px]"
+                    >
+                      <path d="M23 3a2 2 0 0 1 1.995 1.85L25 5v1.522l5-1.999v11.954l-5-2V16a2 2 0 0 1-1.85 1.995L23 18l-6.1.001a5.005 5.005 0 0 1-3.984 3.915 5.002 5.002 0 0 1-4.7 4.08L8 26H4v4H2V20h2v4h4a3.001 3.001 0 0 0 2.872-2.13A5.004 5.004 0 0 1 7.1 18.002L4 18a2 2 0 0 1-1.995-1.85L2 16V5a2 2 0 0 1 1.85-1.995L4 3zM12 14a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm11-9H4v11h3.1a5.002 5.002 0 0 1 9.8 0H23zm5 2.476l-3 1.2v3.647l3 1.2zM7 7a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <label
+                  id="popup"
+                  class="cursor-pointer text-[12px] pl-1 font-medium select-none !text-[#222222] "
+                >
+                  Security Cameras
+                </label>
+              </div>
+            </div>
+            <div class="flex cursor-pointer justify-between items-center bg-white false !h-14 relative border px-4  rounded-md !min-h-[45px] mb-4 sm:mb-0 w-full  md:min-w-[23%] md:max-w-[29%] xl:min-w-[21%] xl:max-w-[21.7%] "
+            >
+              <div id="popup" class="flex false items-center gap-1.5 ">
+                <input
+                  type="checkbox"
+                  class="!w-[14px] h-[14px] outline-none text-blue-600 pl-5 cursor-pointer bg-gray-100 border-gray-300 rounded "
+                />
+                <div class="!text-xs">
+                  <div
+                    id="popup"
+                    class="iconSize  cursor-pointer !text-[#222222]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="#000000"
+                      viewBox="0 0 1024 1024"
+                      className="w-[24px] h-[24px]"
+                    >
+                      <path d="M522.267 910.508c16.962 0 30.72-13.758 30.72-30.72v-736.43c0-16.962-13.758-30.72-30.72-30.72H143.356c-16.962 0-30.72 13.758-30.72 30.72v736.43c0 16.962 13.758 30.72 30.72 30.72h378.911zm0 40.96H143.356c-39.583 0-71.68-32.097-71.68-71.68v-736.43c0-39.583 32.097-71.68 71.68-71.68h378.911c39.583 0 71.68 32.097 71.68 71.68v736.43c0 39.583-32.097 71.68-71.68 71.68zm388.62-678.049v500.265c0 49.412-40.054 89.467-89.467 89.467-49.443 0-89.498-40.054-89.498-89.467 0-11.311-9.169-20.48-20.48-20.48s-20.48 9.169-20.48 20.48c0 72.034 58.393 130.427 130.427 130.427 72.065 0 130.458-58.393 130.458-130.427V273.419c0-11.311-9.169-20.48-20.48-20.48s-20.48 9.169-20.48 20.48z"></path>
+                      <path d="M731.92 779.436V368.648c0-11.311-9.169-20.48-20.48-20.48s-20.48 9.169-20.48 20.48v410.788c0 11.311 9.169 20.48 20.48 20.48s20.48-9.169 20.48-20.48z"></path>
+                      <path d="M731.943 365.513v-34.499c0-49.414-40.053-89.467-89.467-89.467-49.415 0-89.477 40.054-89.477 89.467v34.499c0 11.311 9.169 20.48 20.48 20.48s20.48-9.169 20.48-20.48v-34.499c0-26.789 21.722-48.507 48.517-48.507 26.792 0 48.507 21.715 48.507 48.507v34.499c0 11.311 9.169 20.48 20.48 20.48s20.48-9.169 20.48-20.48zM942.5 254.981L767.785 80.266c-7.998-7.998-20.965-7.998-28.963 0s-7.998 20.965 0 28.963l174.715 174.715c7.998 7.998 20.965 7.998 28.963 0s7.998-20.965 0-28.963zM438.84 281.52c5.657 0 10.24-4.583 10.24-10.24V225.2c0-5.657-4.583-10.24-10.24-10.24H225.541a10.238 10.238 0 00-10.24 10.24v46.08c0 5.657 4.583 10.24 10.24 10.24H438.84zm0 40.96H225.541c-28.278 0-51.2-22.922-51.2-51.2V225.2c0-28.278 22.922-51.2 51.2-51.2H438.84c28.278 0 51.2 22.922 51.2 51.2v46.08c0 28.278-22.922 51.2-51.2 51.2z"></path>
+                      <path d="M928.972 358.832h-48.978c-11.309 0-20.48-9.171-20.48-20.48V191.091c0-11.311-9.169-20.48-20.48-20.48s-20.48 9.169-20.48 20.48v147.261c0 33.931 27.509 61.44 61.44 61.44h48.978c11.311 0 20.48-9.169 20.48-20.48s-9.169-20.48-20.48-20.48z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <label
+                  id="popup"
+                  class="cursor-pointer text-[12px] pl-1 font-medium select-none !text-[#222222] "
+                >
+                  Jet-A Fuel
+                </label>
+              </div>
+            </div>
+            <div class="flex cursor-pointer justify-between items-center bg-white false !h-14 relative border px-4  rounded-md !min-h-[45px] mb-4 sm:mb-0 w-full  md:min-w-[23%] md:max-w-[29%] xl:min-w-[21%] xl:max-w-[21.7%] "
+            >
+              <div id="popup" class="flex false items-center gap-1.5 ">
+                <input
+                  type="checkbox"
+                  class="!w-[14px] h-[14px] outline-none text-blue-600 pl-5 cursor-pointer bg-gray-100 border-gray-300 rounded "
+                />
+                <div class="!text-xs">
+                  <div
+                    id="popup"
+                    class="iconSize  cursor-pointer !text-[#222222]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="#000000"
+                      viewBox="0 0 1024 1024"
+                      className="w-[24px] h-[24px]"
+                    >
+                      <path d="M522.267 910.508c16.962 0 30.72-13.758 30.72-30.72v-736.43c0-16.962-13.758-30.72-30.72-30.72H143.356c-16.962 0-30.72 13.758-30.72 30.72v736.43c0 16.962 13.758 30.72 30.72 30.72h378.911zm0 40.96H143.356c-39.583 0-71.68-32.097-71.68-71.68v-736.43c0-39.583 32.097-71.68 71.68-71.68h378.911c39.583 0 71.68 32.097 71.68 71.68v736.43c0 39.583-32.097 71.68-71.68 71.68zm388.62-678.049v500.265c0 49.412-40.054 89.467-89.467 89.467-49.443 0-89.498-40.054-89.498-89.467 0-11.311-9.169-20.48-20.48-20.48s-20.48 9.169-20.48 20.48c0 72.034 58.393 130.427 130.427 130.427 72.065 0 130.458-58.393 130.458-130.427V273.419c0-11.311-9.169-20.48-20.48-20.48s-20.48 9.169-20.48 20.48z"></path>
+                      <path d="M731.92 779.436V368.648c0-11.311-9.169-20.48-20.48-20.48s-20.48 9.169-20.48 20.48v410.788c0 11.311 9.169 20.48 20.48 20.48s20.48-9.169 20.48-20.48z"></path>
+                      <path d="M731.943 365.513v-34.499c0-49.414-40.053-89.467-89.467-89.467-49.415 0-89.477 40.054-89.477 89.467v34.499c0 11.311 9.169 20.48 20.48 20.48s20.48-9.169 20.48-20.48v-34.499c0-26.789 21.722-48.507 48.517-48.507 26.792 0 48.507 21.715 48.507 48.507v34.499c0 11.311 9.169 20.48 20.48 20.48s20.48-9.169 20.48-20.48zM942.5 254.981L767.785 80.266c-7.998-7.998-20.965-7.998-28.963 0s-7.998 20.965 0 28.963l174.715 174.715c7.998 7.998 20.965 7.998 28.963 0s7.998-20.965 0-28.963zM438.84 281.52c5.657 0 10.24-4.583 10.24-10.24V225.2c0-5.657-4.583-10.24-10.24-10.24H225.541a10.238 10.238 0 00-10.24 10.24v46.08c0 5.657 4.583 10.24 10.24 10.24H438.84zm0 40.96H225.541c-28.278 0-51.2-22.922-51.2-51.2V225.2c0-28.278 22.922-51.2 51.2-51.2H438.84c28.278 0 51.2 22.922 51.2 51.2v46.08c0 28.278-22.922 51.2-51.2 51.2z"></path>
+                      <path d="M928.972 358.832h-48.978c-11.309 0-20.48-9.171-20.48-20.48V191.091c0-11.311-9.169-20.48-20.48-20.48s-20.48 9.169-20.48 20.48v147.261c0 33.931 27.509 61.44 61.44 61.44h48.978c11.311 0 20.48-9.169 20.48-20.48s-9.169-20.48-20.48-20.48z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <label
+                  id="popup"
+                  class="cursor-pointer text-[12px] pl-1 font-medium select-none !text-[#222222] "
+                >
+                  Jet-A Fuel
+                </label>
+              </div>
+            </div>
+            <div class="flex cursor-pointer justify-between items-center bg-white false !h-14 relative border px-4  rounded-md !min-h-[45px] mb-4 sm:mb-0 w-full  md:min-w-[23%] md:max-w-[29%] xl:min-w-[21%] xl:max-w-[21.7%] "
+            >
+              <div id="popup" class="flex false items-center gap-1.5 ">
+                <input
+                  type="checkbox"
+                  class="!w-[14px] h-[14px] outline-none text-blue-600 pl-5 cursor-pointer bg-gray-100 border-gray-300 rounded "
+                />
+                <div class="!text-xs">
+                  <div
+                    id="popup"
+                    class="iconSize  cursor-pointer !text-[#222222]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="#000000"
+                      viewBox="0 0 1024 1024"
+                      className="w-[24px] h-[24px]"
+                    >
+                      <path d="M522.267 910.508c16.962 0 30.72-13.758 30.72-30.72v-736.43c0-16.962-13.758-30.72-30.72-30.72H143.356c-16.962 0-30.72 13.758-30.72 30.72v736.43c0 16.962 13.758 30.72 30.72 30.72h378.911zm0 40.96H143.356c-39.583 0-71.68-32.097-71.68-71.68v-736.43c0-39.583 32.097-71.68 71.68-71.68h378.911c39.583 0 71.68 32.097 71.68 71.68v736.43c0 39.583-32.097 71.68-71.68 71.68zm388.62-678.049v500.265c0 49.412-40.054 89.467-89.467 89.467-49.443 0-89.498-40.054-89.498-89.467 0-11.311-9.169-20.48-20.48-20.48s-20.48 9.169-20.48 20.48c0 72.034 58.393 130.427 130.427 130.427 72.065 0 130.458-58.393 130.458-130.427V273.419c0-11.311-9.169-20.48-20.48-20.48s-20.48 9.169-20.48 20.48z"></path>
+                      <path d="M731.92 779.436V368.648c0-11.311-9.169-20.48-20.48-20.48s-20.48 9.169-20.48 20.48v410.788c0 11.311 9.169 20.48 20.48 20.48s20.48-9.169 20.48-20.48z"></path>
+                      <path d="M731.943 365.513v-34.499c0-49.414-40.053-89.467-89.467-89.467-49.415 0-89.477 40.054-89.477 89.467v34.499c0 11.311 9.169 20.48 20.48 20.48s20.48-9.169 20.48-20.48v-34.499c0-26.789 21.722-48.507 48.517-48.507 26.792 0 48.507 21.715 48.507 48.507v34.499c0 11.311 9.169 20.48 20.48 20.48s20.48-9.169 20.48-20.48zM942.5 254.981L767.785 80.266c-7.998-7.998-20.965-7.998-28.963 0s-7.998 20.965 0 28.963l174.715 174.715c7.998 7.998 20.965 7.998 28.963 0s7.998-20.965 0-28.963zM438.84 281.52c5.657 0 10.24-4.583 10.24-10.24V225.2c0-5.657-4.583-10.24-10.24-10.24H225.541a10.238 10.238 0 00-10.24 10.24v46.08c0 5.657 4.583 10.24 10.24 10.24H438.84zm0 40.96H225.541c-28.278 0-51.2-22.922-51.2-51.2V225.2c0-28.278 22.922-51.2 51.2-51.2H438.84c28.278 0 51.2 22.922 51.2 51.2v46.08c0 28.278-22.922 51.2-51.2 51.2z"></path>
+                      <path d="M928.972 358.832h-48.978c-11.309 0-20.48-9.171-20.48-20.48V191.091c0-11.311-9.169-20.48-20.48-20.48s-20.48 9.169-20.48 20.48v147.261c0 33.931 27.509 61.44 61.44 61.44h48.978c11.311 0 20.48-9.169 20.48-20.48s-9.169-20.48-20.48-20.48z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <label
+                  id="popup"
+                  class="cursor-pointer text-[12px] pl-1 font-medium select-none !text-[#222222] "
+                >
+                  Jet-A Fuel
+                </label>
+              </div>
+            </div>
+            <div class="flex cursor-pointer justify-between items-center bg-white false !h-14 relative border px-4  rounded-md !min-h-[45px] mb-4 sm:mb-0 w-full  md:min-w-[23%] md:max-w-[29%] xl:min-w-[21%] xl:max-w-[21.7%] "
+            >
+              <div id="popup" class="flex false items-center gap-1.5 ">
+                <input
+                  type="checkbox"
+                  class="!w-[14px] h-[14px] outline-none text-blue-600 pl-5 cursor-pointer bg-gray-100 border-gray-300 rounded "
+                />
+                <div class="!text-xs">
+                  <div
+                    id="popup"
+                    class="iconSize  cursor-pointer !text-[#222222]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="#000000"
+                      viewBox="0 0 1024 1024"
+                      className="w-[24px] h-[24px]"
+                    >
+                      <path d="M522.267 910.508c16.962 0 30.72-13.758 30.72-30.72v-736.43c0-16.962-13.758-30.72-30.72-30.72H143.356c-16.962 0-30.72 13.758-30.72 30.72v736.43c0 16.962 13.758 30.72 30.72 30.72h378.911zm0 40.96H143.356c-39.583 0-71.68-32.097-71.68-71.68v-736.43c0-39.583 32.097-71.68 71.68-71.68h378.911c39.583 0 71.68 32.097 71.68 71.68v736.43c0 39.583-32.097 71.68-71.68 71.68zm388.62-678.049v500.265c0 49.412-40.054 89.467-89.467 89.467-49.443 0-89.498-40.054-89.498-89.467 0-11.311-9.169-20.48-20.48-20.48s-20.48 9.169-20.48 20.48c0 72.034 58.393 130.427 130.427 130.427 72.065 0 130.458-58.393 130.458-130.427V273.419c0-11.311-9.169-20.48-20.48-20.48s-20.48 9.169-20.48 20.48z"></path>
+                      <path d="M731.92 779.436V368.648c0-11.311-9.169-20.48-20.48-20.48s-20.48 9.169-20.48 20.48v410.788c0 11.311 9.169 20.48 20.48 20.48s20.48-9.169 20.48-20.48z"></path>
+                      <path d="M731.943 365.513v-34.499c0-49.414-40.053-89.467-89.467-89.467-49.415 0-89.477 40.054-89.477 89.467v34.499c0 11.311 9.169 20.48 20.48 20.48s20.48-9.169 20.48-20.48v-34.499c0-26.789 21.722-48.507 48.517-48.507 26.792 0 48.507 21.715 48.507 48.507v34.499c0 11.311 9.169 20.48 20.48 20.48s20.48-9.169 20.48-20.48zM942.5 254.981L767.785 80.266c-7.998-7.998-20.965-7.998-28.963 0s-7.998 20.965 0 28.963l174.715 174.715c7.998 7.998 20.965 7.998 28.963 0s7.998-20.965 0-28.963zM438.84 281.52c5.657 0 10.24-4.583 10.24-10.24V225.2c0-5.657-4.583-10.24-10.24-10.24H225.541a10.238 10.238 0 00-10.24 10.24v46.08c0 5.657 4.583 10.24 10.24 10.24H438.84zm0 40.96H225.541c-28.278 0-51.2-22.922-51.2-51.2V225.2c0-28.278 22.922-51.2 51.2-51.2H438.84c28.278 0 51.2 22.922 51.2 51.2v46.08c0 28.278-22.922 51.2-51.2 51.2z"></path>
+                      <path d="M928.972 358.832h-48.978c-11.309 0-20.48-9.171-20.48-20.48V191.091c0-11.311-9.169-20.48-20.48-20.48s-20.48 9.169-20.48 20.48v147.261c0 33.931 27.509 61.44 61.44 61.44h48.978c11.311 0 20.48-9.169 20.48-20.48s-9.169-20.48-20.48-20.48z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <label
+                  id="popup"
+                  class="cursor-pointer text-[12px] pl-1 font-medium select-none !text-[#222222] "
+                >
+                  Jet-A Fuel
+                </label>
+              </div>
+            </div>
+            </div>
+            </div>
         </div>
       </div>
       <div className="footer fixed bottom-0 right-0 left-0 bg-white z-50">
@@ -58,7 +585,7 @@ const Amienities = () => {
           </div>
         </div>
         <div className="btn flex justify-end gap-2 px-[20px] py-2">
-          <Link href="/hangaraddimg">
+          <Link href="/hangarfinish">
             <button
               type="submit"
               class="disabled:bg-opacity-50 font-normal flex items-center justify-center text-[16px] sm:p-2 outline-none z-0 px-6 select-none sm:w-24 h-10 border-l border rounded-full bg-[#0aeef] border-1 border-[#00aeef] text-[#00aeef] !cursor-pointer"
@@ -66,7 +593,7 @@ const Amienities = () => {
               Back
             </button>
           </Link>
-          <Link href="/hangarlastpage">
+          <Link href="/hangarterms">
             <button
               type="submit"
               class="disabled:bg-opacity-50 font-semibold flex items-center justify-center sm:p-2 outline-none z-0 text-[16px] px-6 select-none sm:w-24 h-10 border-l border rounded-full bg-[#00aeef] text-white !cursor-pointer"

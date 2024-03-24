@@ -3,8 +3,9 @@ import Link from "next/link";
 
 const Standout = () => {
   return (
-    <div className="container">
-      <div className="sub-conatiner flex flex-col-reverse md:flex-col lg:flex-row lg:items-center items-center gap-12 p-[20px] lg:px-[56px] mb-16">
+    <div className="wrapper px-[20px] lg:px-[56px]">
+    <div className="container"> 
+      <div className="sub-conatiner flex flex-col-reverse md:flex-col lg:flex-row lg:items-center items-center gap-12 mb-16">
         <div className="txt w-full px-3">
           <h1 class=" font-semibold">Step 2</h1>
           <h2 class="md:text-[54px] text-[35px] leading-[60px] font-semibold">Make your hangar stand out</h2>
@@ -47,7 +48,8 @@ const Standout = () => {
             </Link>
         </div>
       </div>
-    </div>
+      </div>
+      </div>
   );
 };
 export default Standout;
