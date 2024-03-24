@@ -28,7 +28,7 @@ const Price = () => {
         <div class="input-item flex flex-col items-center  sm:mx-auto sm:w-[50%] mt-2 mb-6 ">
           <div>
           <div class=" p-0.5 font-bold !text-left text-[17px]">
-                Price per month<span class="text-[#00aeef] text-sm">*</span>
+                <input type="checkbox" /> Price per month<span class="text-[#00aeef] text-sm">*</span>
               </div>
             <div className="w-[300px] xl:w-[400px] md:w-[330px] lg:w-[350px]  mx-1 px-4 !h-14 rounded-lg border-2 p-2 !border-gray-300 hover:border-gray-500 overflow-hidden outline-none text-[14px] font-medium flex gap-2 items-center">
                <span className="font-semibold text-[18px]"> $</span>
