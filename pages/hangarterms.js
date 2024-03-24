@@ -69,12 +69,12 @@ const Terms = () => {
                 Back
               </button>
             </Link>
-            <Link href="/hangar">
+            <Link href="/hangarlastpage">
               <button
                 type="submit"
-                class="disabled:bg-opacity-50 font-normal flex items-center justify-center sm:p-2 outline-none z-0 text-[16px] px-6 select-none sm:w-24 h-10 border-l border rounded-full bg-[#00aeef] text-white !cursor-pointer"
+                class="disabled:bg-opacity-50 font-semibold flex items-center justify-center sm:p-2 outline-none z-0 text-[16px] px-6 select-none sm:w-24 h-10 border-l border rounded-full bg-[#00aeef] text-white !cursor-pointer"
               >
-                Next
+                Finish
               </button>
             </Link>
           </div>
