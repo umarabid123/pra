@@ -3,7 +3,8 @@ import Link from "next/link";
 
 const Description = () => {
   return (
-    <div className="container px-[20px] lg:px-[56px] text-2xl font-semibold sm:font-bold mb-20">
+    <div className="wrapper px-[20px] lg:px-[56px] ">
+    <div className="container text-2xl font-semibold sm:font-bold mb-20">
       <div className="heading">
         <h1 class="w-full text-center">Now, let’s give your hangar a title.</h1>
         <div class="font-normal text-sm text-center w-full !text-[#737373] pt-3">
@@ -454,6 +455,7 @@ const Description = () => {
             </Link>
         </div>
       </div>
+    </div>
     </div>
   );
 };

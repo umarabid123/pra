@@ -3,9 +3,10 @@ import Link from "next/link";
 
 const Location = () => {
   return (
+    <div className="wrapper px-[20px] lg:px-[56px]">
     <div className="container">
       <div className="location-container mb-20">
-        <div className="location-txt px-[20px] mb-4">
+        <div className="location-txt mb-4">
           <h1 class="w-full text-center text-2xl font-semibold sm:font-bold px-6 sm:px-0">
             Where is your hangar located?
           </h1>
@@ -14,7 +15,7 @@ const Location = () => {
             until a reservation has been made.
           </div>
         </div>
-        <div className="location-container-item lg:px-[56px] flex flex-col lg:flex-row  lg:gap-6 xl:gap-8 lg:justify-center items-center lg:items-start">
+        <div className="location-container-item flex flex-col lg:flex-row  lg:gap-6 xl:gap-8 lg:justify-center items-center lg:items-start">
           <img src="./images/location.webp" alt="" className="rounded-md w-full lg:w-[70%] xl:w-[60%] h-[400px] overflow-hidden" />
           <form action="">
             <div className="form self-start lg:w-[48%]">
@@ -73,6 +74,7 @@ const Location = () => {
             </Link>
         </div>
       </div>
+    </div>
     </div>
   );
 };
