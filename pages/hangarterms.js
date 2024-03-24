@@ -6,13 +6,13 @@ const Terms = () => {
     <div className="wrapper px-[20px] lg:px-[56px] mb-20">
       <div className="container ">
         <div className="heading flex flex-col">
-      <h1 class="w-full text-center text-2xl font-semibold md:font-bold mb-4">
-           Terms and Conditions
+          <h1 class="w-full text-center text-2xl font-semibold md:font-bold mb-4">
+            Terms and Conditions
           </h1>
-        <div class="text-center mt-5 text-[18px] font-semibold">
-          By listing your hangar with Hangar Direct, you acknowledge and agree
-          to the following terms:
-        </div>
+          <div class="text-center mt-5 text-[18px] font-semibold">
+            By listing your hangar with Hangar Direct, you acknowledge and agree
+            to the following terms:
+          </div>
         </div>
         <div class="md:w-1/2 px-5 mx-auto my-5 justify-center list-decimal">
           <div class="list-item text-sm">
@@ -48,36 +48,42 @@ const Terms = () => {
             hangar space by transient renters facilitated through Hangar Direct.
           </div>
         </div>
-        <div className="footer fixed bottom-0 right-0 left-0 bg-white z-50">
-          <div class="flex gap-5">
-            <div class="relative w-full bg-[#EBEBEB] rounded-r-full h-2.5">
-              <div class="bg-primry  h-2.5 rounded-r-full delay-150 transition-all"></div>
-            </div>
-            <div class="relative w-full bg-[#EBEBEB] rounded-full h-2.5">
-              <div class="bg-primar  h-2.5 rounded-full delay-150 transition-all"></div>
-            </div>
-            <div class="relative w-full  bg-[#EBEBEB] rounded-l-full h-2.5">
-              <div class="bg-primar  h-2.5 false rounded-full delay-150 transition-all"></div>
-            </div>
+        <div class="flex justify-center gap-3 mt-2 items-center">
+          <input type="checkbox" />
+          <label class="cursor-pointer text-sm font-semibold select-none">
+            I agree to the terms and conditions.
+          </label>
+        </div>
+      </div>
+      <div className="footer fixed bottom-0 right-0 left-0 bg-white z-50">
+        <div class="flex gap-5">
+          <div class="relative w-full bg-[#EBEBEB] rounded-r-full h-2.5">
+            <div class="bg-primry  h-2.5 rounded-r-full delay-150 transition-all"></div>
           </div>
-          <div className="btn flex justify-end gap-2 px-[20px] py-2">
-            <Link href="/hangaraddimg">
-              <button
-                type="submit"
-                class="disabled:bg-opacity-50 font-normal flex items-center justify-center text-[16px] sm:p-2 outline-none z-0 px-6 select-none sm:w-24 h-10 border-l border rounded-full bg-[#0aeef] border-1 border-[#00aeef] text-[#00aeef] !cursor-pointer"
-              >
-                Back
-              </button>
-            </Link>
-            <Link href="/hangarlastpage">
-              <button
-                type="submit"
-                class="disabled:bg-opacity-50 font-semibold flex items-center justify-center sm:p-2 outline-none z-0 text-[16px] px-6 select-none sm:w-24 h-10 border-l border rounded-full bg-[#00aeef] text-white !cursor-pointer"
-              >
-                Finish
-              </button>
-            </Link>
+          <div class="relative w-full bg-[#EBEBEB] rounded-full h-2.5">
+            <div class="bg-primar  h-2.5 rounded-full delay-150 transition-all"></div>
           </div>
+          <div class="relative w-full  bg-[#EBEBEB] rounded-l-full h-2.5">
+            <div class="bg-primar  h-2.5 false rounded-full delay-150 transition-all"></div>
+          </div>
+        </div>
+        <div className="btn flex justify-end gap-2 px-[20px] py-2">
+          <Link href="/hangaramenities">
+            <button
+              type="submit"
+              class="disabled:bg-opacity-50 font-normal flex items-center justify-center text-[16px] sm:p-2 outline-none z-0 px-6 select-none sm:w-24 h-10 border-l border rounded-full bg-[#0aeef] border-1 border-[#00aeef] text-[#00aeef] !cursor-pointer"
+            >
+              Back
+            </button>
+          </Link>
+          <Link href="/hangarlastpage">
+            <button
+              type="submit"
+              class="disabled:bg-opacity-50 font-semibold flex items-center justify-center sm:p-2 outline-none z-0 text-[16px] px-6 select-none sm:w-24 h-10 border-l border rounded-full bg-[#00aeef] text-white !cursor-pointer"
+            >
+              Finish
+            </button>
+          </Link>
         </div>
       </div>
     </div>
