@@ -30,7 +30,7 @@ const Finish = () => {
           </div>
         </div>
        <div className="btn flex justify-end gap-2 px-[20px] py-2">
-          <Link href="/hangaraddimg">
+          <Link href="/hangarprice">
             <button
               type="submit"
               class="disabled:bg-opacity-50 font-normal flex items-center justify-center text-[16px] sm:p-2 outline-none z-0 px-6 select-none sm:w-24 h-10 border-l border rounded-full bg-[#0aeef] border-1 border-[#00aeef] text-[#00aeef] !cursor-pointer"

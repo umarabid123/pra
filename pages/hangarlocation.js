@@ -16,7 +16,7 @@ const Location = () => {
           </div>
         </div>
         <div className="location-container-item flex flex-col lg:flex-row  lg:gap-6 xl:gap-8 lg:justify-center items-center lg:items-start">
-          <img src="./images/location.webp" alt="" className="rounded-md w-full lg:w-[70%] xl:w-[60%] h-[400px] overflow-hidden" />
+          <img src="./images/location.webp" alt="" className="rounded-md w-full lg:w-[70%] xl:w-[60%] h-auto lg:h-[400px] overflow-hidden" />
           <form action="">
             <div className="form self-start lg:w-[48%]">
               <div class=" p-0.5 font-bold text-left">

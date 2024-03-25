@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Description = () => {
   return (
-    <div className="wrapper px-[20px] lg:px-[56px] ">
+    <div className="wrapper px-[20px] lg:px-[56px] overflow-hidden">
     <div className="container text-2xl font-semibold sm:font-bold mb-20">
       <div className="heading">
         <h1 class="w-full text-center">Now, let’s give your hangar a title.</h1>
