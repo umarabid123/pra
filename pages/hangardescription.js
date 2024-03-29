@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Input from "@/components/common/Input";
 import Link from "next/link";
 
 const Description = () => {
@@ -12,16 +13,7 @@ const Description = () => {
         </div>
       </div>
       <div className="input-item flex flex-col items-center m-auto w-full pt-8">
-        <div>
-          <div class=" p-0.5 font-bold !text-left text-[17px]">
-            Title<span class="text-[#00aeef] text-sm">*</span>
-          </div>
-          <input
-            type="text"
-            class="w-[300px] md:w-[400px] lg:w-[500px] xl:w-[600px] md:3 px-4 !h-12 rounded-lg border-2 p-2 border-gray-300 hover:border-gray-500 overflow-hidden outline-none text-[16px] font-medium"
-            placeholder="Hangar listing title"
-          ></input>
-        </div>
+        <Input label={"Title"} placeholder={"Hangar listing title"} staric customClass={`w-[300px] md:w-[400px] lg:w-[500px] xl:w-[600px] md:3 px-4 !h-12 rounded-lg border-2 p-2 border-gray-300 hover:border-gray-500 overflow-hidden outline-none text-[16px] font-medium`}/>
       </div>
       <div className="text mt-6">
         <h1 class="w-full text-center">Create your description</h1>

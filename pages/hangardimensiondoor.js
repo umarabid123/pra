@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Input from "@/components/common/Input";
 import Link from "next/link";
 
 const Door = () => {
@@ -14,42 +15,16 @@ const Door = () => {
           We will make sure the plane fits!
           </div>
           <div className="input-item m-auto flex justify-center w-full pt-8">
-            <div>
-              <div class=" p-0.5 font-bold !text-left text-[17px]">
-                Length<span class="text-[#00aeef] text-sm">*</span>
-              </div>
-              <div className="input flex flex-col md:flex-row items-center flex-wrap gap-4">
-                <input
-                  type="text"
-                  class="min-w-[200px] md:w-[300px] lg:w-[300px] xl:w-[300px] md:3 px-4 !h-12 rounded-lg border-2 p-2 border-gray-300 hover:border-gray-500 overflow-hidden outline-none text-[16px] font-medium"
-                  placeholder="ft"
-                ></input>
-                <input
-                  type="text"
-                  class="min-w-[200px] md:w-[300px] lg:w-[300px] xl:w-[300px] md:3 px-4 !h-12 rounded-lg border-2 p-2 border-gray-300 hover:border-gray-500 overflow-hidden outline-none text-[16px] font-medium"
-                  placeholder="inches"
-                ></input>
-              </div>
-            </div>
+           <div className="flex gap-4 items-end">
+           <Input label={"Length"} placeholder={"ft"} staric customClass={`min-w-[200px] md:w-[300px] lg:w-[300px] xl:w-[300px]`}/>
+            <Input placeholder={"inches"} customClass={`min-w-[200px] md:w-[300px] lg:w-[300px] xl:w-[300px]`}/>
+           </div>
           </div>
           <div className="input-item m-auto flex justify-center w-full pt-8">
-            <div>
-              <div class=" p-0.5 font-bold !text-left text-[17px]">
-                Width<span class="text-[#00aeef] text-sm">*</span>
-              </div>
-              <div className="input flex flex-col md:flex-row items-center flex-wrap gap-4">
-                <input
-                  type="text"
-                  class="min-w-[200px] md:w-[300px] lg:w-[300px] xl:w-[300px] md:3 px-4 !h-12 rounded-lg border-2 p-2 border-gray-300 hover:border-gray-500 overflow-hidden outline-none text-[16px] font-medium"
-                  placeholder="ft"
-                ></input>
-                <input
-                  type="text"
-                  class="min-w-[200px] md:w-[300px] lg:w-[300px] xl:w-[300px] md:3 px-4 !h-12 rounded-lg border-2 p-2 border-gray-300 hover:border-gray-500 overflow-hidden outline-none text-[16px] font-medium"
-                  placeholder="inches"
-                ></input>
-              </div>
-            </div>
+          <div className="flex gap-4 items-end">
+           <Input label={"Length"} placeholder={"ft"} staric customClass={`min-w-[200px] md:w-[300px] lg:w-[300px] xl:w-[300px]`}/>
+            <Input placeholder={"inches"} customClass={`min-w-[200px] md:w-[300px] lg:w-[300px] xl:w-[300px]`}/>
+           </div>
           </div>
         </div>
         <div className="flex justify-center sm:mt-5">
