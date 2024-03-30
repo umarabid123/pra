@@ -149,6 +149,7 @@ const Header = () => {
               >
                 Home
               </p>
+        <Link href="/account"><p class="text-sm p-2">Account</p></Link>
               <p class="text-sm p-2">My Favorites</p>
               <p class="text-sm p-2">Messenger</p>
               <p class="text-sm p-2">Help desk</p>

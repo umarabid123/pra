@@ -10,7 +10,7 @@ const Card = ({item}) => {
             />
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-8 w-8 fill-gray-300 opacity-30 stroke-white stroke-[1.5px] absolute top-2 right-5"
+              class="h-8 w-8 fill-gray-300 opacity-30 stroke-white stroke-[1.5px] absolute top-2 right-9"
               viewBox="0 0 20 20"
               id="popup"
               fill="currentColor"
