@@ -4,61 +4,61 @@ import AccountCard from "@/components/common/AccountCard";
 import Link from "next/link";
 
 const HostingIcon = [
-    {
-      HostIcon: (<svg
-          width="800px"
-          height="800px"
-          viewBox="0 0 48 48"
-          enable-background="new 0 0 48 48"
-          id="Layer_3"
-          xml:space="preserve"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          class="w-6 h-6 md:w-8 md:h-8"
-        >
-          <g>
-            <rect fill="#241F20" height="4" width="35" x="13" y="12.448"></rect>
-            <polygon
-              fill="#241F20"
-              points="3.961,13.321 2.121,11.481 0,13.603 1.84,15.443 1.836,15.447 3.958,17.568 11.097,10.429    8.976,8.307  "
-            ></polygon>
-            <rect fill="#241F20" height="4" width="35" x="13" y="23.511"></rect>
-            <polygon
-              fill="#241F20"
-              points="3.962,24.384 2.121,22.544 0,24.666 1.84,26.506 1.836,26.51 3.958,28.631 11.097,21.491    8.976,19.37  "
-            ></polygon>
-            <rect fill="#241F20" height="4" width="35" x="13" y="34.574"></rect>
-            <polygon
-              fill="#241F20"
-              points="3.961,35.445 2.121,33.607 0,35.729 1.84,37.568 1.836,37.572 3.958,39.693 11.097,32.555    8.976,30.432  "
-            ></polygon>
-          </g>
-        </svg>
-      ),
-      heading: "Manage Listings",
-      description: "View current and past listings.",
-    },
-    {
-      HostIcon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="w-6 h-6 md:w-8 md:h-8"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z"
-          ></path>
-        </svg>
-      ),
-      heading: "Payments & Payouts",
-      description: "Review payment methods and configure payouts.",
-    },
-  ];
+  {
+    Icon: (
+      <svg
+        width="800px"
+        height="800px"
+        viewBox="0 0 48 48"
+        enable-background="new 0 0 48 48"
+        id="Layer_3"
+        xmlns="http://www.w3.org/2000/svg"
+        xlink="http://www.w3.org/1999/xlink"
+        class="w-6 h-6 md:w-8 md:h-8"
+      >
+        <g>
+          <rect fill="#241F20" height="4" width="35" x="13" y="12.448"></rect>
+          <polygon
+            fill="#241F20"
+            points="3.961,13.321 2.121,11.481 0,13.603 1.84,15.443 1.836,15.447 3.958,17.568 11.097,10.429    8.976,8.307  "
+          ></polygon>
+          <rect fill="#241F20" height="4" width="35" x="13" y="23.511"></rect>
+          <polygon
+            fill="#241F20"
+            points="3.962,24.384 2.121,22.544 0,24.666 1.84,26.506 1.836,26.51 3.958,28.631 11.097,21.491    8.976,19.37  "
+          ></polygon>
+          <rect fill="#241F20" height="4" width="35" x="13" y="34.574"></rect>
+          <polygon
+            fill="#241F20"
+            points="3.961,35.445 2.121,33.607 0,35.729 1.84,37.568 1.836,37.572 3.958,39.693 11.097,32.555    8.976,30.432  "
+          ></polygon>
+        </g>
+      </svg>
+    ),
+    heading: "Manage Listings",
+    description: "View current and past listings.",
+  },
+  {
+    Icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-6 h-6 md:w-8 md:h-8"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z"
+        ></path>
+      </svg>
+    ),
+    heading: "Payments & Payouts",
+    description: "Review payment methods and configure payouts.",
+  },
+];
 const CardIcon = [
   {
     Icon: (
@@ -162,12 +162,12 @@ const Account = () => {
         ))}
       </div>
       <div className="hosting">
-      <p class="text-4xl font-semibold mb-2">Hosting </p>
-      <div className="card-container flex gap-3 md:gap-3 lg:gap-4 xl:gap-3 flex-wrap mt-10">
-        {HostingIcon.map((cardItem, index) => (
-          <AccountCard {...{ cardItem }} />
-        ))}
-      </div>
+        <p class="text-4xl font-semibold mb-2">Hosting </p>
+        <div className="card-container flex gap-3 md:gap-3 lg:gap-4 xl:gap-3 flex-wrap mt-10">
+          {HostingIcon.map((cardItem, index) => (
+            <AccountCard {...{ cardItem }} />
+          ))}
+        </div>
       </div>
       <Footer />
     </div>
