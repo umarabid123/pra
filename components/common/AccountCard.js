@@ -1,7 +1,7 @@
 const AccountCard = ({cardItem}) => {
   return (
     <>
-     <div className="card bg-gray-50 w-[100%] md:w-[49%] lg:w-[32%] xl:min-w-[31%] box-border px-5 py-6 min-h-[160px] rounded-xl shadow-xl border-0 border-s-[#e5e7eb] truncate">
+     <div className="card bg-gray-50 w-[100%] md:w-[49%] lg:w-[32%] xl:min-w-[31%] box-border px-5 py-6 min-h-[170px] rounded-xl shadow-2xl border-0 border-s-[#e5e7eb] truncate cursor-pointer">
           {cardItem.Icon}
         <br />
           <p class="font-semibold text-base mb-2">{cardItem.heading}</p>
