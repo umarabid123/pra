@@ -161,7 +161,7 @@ const Account = () => {
           <AccountCard {...{ cardItem }} />
         ))}
       </div>
-      <div className="hosting">
+      <div className="hosting mt-20">
         <p class="text-4xl font-semibold mb-2">Hosting </p>
         <div className="card-container flex gap-3 md:gap-3 lg:gap-4 xl:gap-3 flex-wrap mt-10">
           {HostingIcon.map((cardItem, index) => (
