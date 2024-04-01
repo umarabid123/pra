@@ -554,10 +554,6 @@ const Home = () => {
         ))}
       </div>
       </div>
-      <div className="flex justify-center">
-        {" "}
-        <Button text={"Submit"} customClass={"mx-auto"} />
-      </div>
       {/* <Footer /> */}
     </div>
   );
