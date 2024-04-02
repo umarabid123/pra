@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Input from "@/components/common/Input";
 import Link from "next/link";
 
-const Location = () => {
+const Step_2 = () => {
   return (
     <div className="wrapper px-[20px] lg:px-[56px]">
       <div className="container">
@@ -18,7 +18,7 @@ const Location = () => {
           </div>
           <div className="location-container-item flex flex-col lg:flex-row  lg:gap-6 xl:gap-8 lg:justify-center items-center lg:items-start">
             <img
-              src="./images/location.webp"
+              src="/images/location.webp"
               alt=""
               className="rounded-md w-full lg:w-[70%] xl:w-[60%] h-auto lg:h-[400px] overflow-hidden"
             />
@@ -93,4 +93,4 @@ const Location = () => {
     </div>
   );
 };
-export default Location;
+export default Step_2;

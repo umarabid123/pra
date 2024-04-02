@@ -7,7 +7,7 @@ const Contact = () => {
         Let‘s get started with listing your hangar.
       </p>
 
-      <Link href="/abouthangar">
+      <Link href="/list-hangar/add">
         <button className="h-full bg-[#00aeef] text-white px-10 py-2 rounded-full mt-6">
           List Your Hangar
         </button>
