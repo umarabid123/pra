@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Step_5 = () => {
   return (
-  <div className="main-container px-[20px] lg:px-[56px]">
+  <div className="main-container px-[20px] lg:px-[56px] flex justify-center">
   <div className="container mb-20">
       <div className="main">
         <div className="heading">

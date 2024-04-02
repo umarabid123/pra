@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Link from "next/link";
 
-const Addimage = () => {
+const Step_8 = () => {
   return (
     <div className="wrapper px-[20px] lg:px-[56px] mb-20">
       <div className="container ">
@@ -81,4 +81,4 @@ const Addimage = () => {
     </div>
   );
 };
-export default Addimage;
+export default Step_8;

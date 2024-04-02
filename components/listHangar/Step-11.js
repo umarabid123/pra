@@ -432,9 +432,9 @@ const dataSvg = [
     Text: "Jet-A Fuel",
   },
 ];
-const Amienities = () => {
+const Step_11= () => {
   return (
-    <div className="wrapper px-[20px] lg:px-[80px] mb-20">
+    <div className="wrapper px-[20px] lg:px-[80px] mb-20 flex justify-center">
       <div className="container flex flex-col items-center">
         <div className="items w-[92%] flex flex-col gap-10">
           <div className="heading flex flex-col mb-4">
@@ -495,4 +495,4 @@ const Amienities = () => {
     </div>
   );
 };
-export default Amienities;
+export default Step_11;

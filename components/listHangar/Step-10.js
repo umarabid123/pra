@@ -1,9 +1,9 @@
 import Header from "@/components/Header";
 import Link from "next/link";
 
-const Finish = () => {
+const Step_10 = () => {
   return (
-    <div className="wrapper px-[20px] lg:px-[56px] mb-20">
+    <div className="wrapper px-[20px] lg:px-[56px] mb-20 flex justify-center">
     <div className="container ">
       <div className="sub-conatiner gap-6 flex flex-col-reverse items-center gap-y-5 lg:flex-row lg:items-center lg:justify-center mb-16">
         <div className="txt lg:px-3 lg:w-[42%] sm:w-[600px]">
@@ -52,4 +52,4 @@ const Finish = () => {
     </div>
   );
 };
-export default Finish;
+export default Step_10;

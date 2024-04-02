@@ -1,9 +1,9 @@
 import Header from "@/components/Header";
 import Link from "next/link";
 
-const Lastpage = () => {
+const Step_13 = () => {
   return (
-    <div className="wrapper px-[20px] lg:px-[56px] mb-20">
+    <div className="wrapper px-[20px] lg:px-[56px] mb-20 flex justify-center">
       <div className="container ">
         <div className="hangar-txt-item flex flex-col items-center">
           <svg
@@ -933,4 +933,4 @@ const Lastpage = () => {
     </div>
   );
 };
-export default Lastpage;
+export default Step_13;

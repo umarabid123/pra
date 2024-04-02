@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Step_6 = () => {
   return (
-    <div className="wrapper px-[20px] lg:px-[56px]">
+    <div className="wrapper px-[20px] lg:px-[56px] flex justify-center">
     <div className="container"> 
       <div className="sub-conatiner flex flex-col-reverse md:flex-col lg:flex-row lg:items-center items-center gap-12 mb-16">
         <div className="txt w-full px-3">
