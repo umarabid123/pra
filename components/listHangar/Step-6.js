@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Link from "next/link";
 
-const Standout = () => {
+const Step_6 = () => {
   return (
     <div className="wrapper px-[20px] lg:px-[56px]">
     <div className="container"> 
@@ -52,4 +52,4 @@ const Standout = () => {
       </div>
   );
 };
-export default Standout;
+export default Step_6;

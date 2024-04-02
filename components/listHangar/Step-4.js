@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Input from "@/components/common/Input";
 import Link from "next/link";
 
-const Dimension = () => {
+const Step_4 = () => {
   return (
     <div className="main-container px-[20px] lg:px-[56px]">
       <div className="container mb-20">
@@ -738,4 +738,4 @@ const Dimension = () => {
     </div>
   );
 };
-export default Dimension;
+export default Step_4;

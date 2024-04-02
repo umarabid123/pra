@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Input from "@/components/common/Input";
 import Link from "next/link";
 
-const Door = () => {
+const Step_5 = () => {
   return (
   <div className="main-container px-[20px] lg:px-[56px]">
   <div className="container mb-20">
@@ -738,4 +738,4 @@ const Door = () => {
     </div>
   );
 };
-export default Door;
+export default Step_5;

@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Link from "next/link";
 
-const Checkin = () => {
+const Step_3 = () => {
   return (
     <div className="wrapper px-[20px] lg:px-[56px] mb-20">
     <div className="container ">
@@ -111,4 +111,4 @@ const Checkin = () => {
     </div>
   );
 };
-export default Checkin;
+export default Step_3;
