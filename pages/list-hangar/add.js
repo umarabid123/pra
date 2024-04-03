@@ -29,7 +29,7 @@ const Add = () =>{
 { isProgress == 1? <Step_1 /> : isProgress == 2? <Step_2 /> : isProgress == 3? <Step_3 />  : isProgress == 4? <Step_4 /> : isProgress == 5? <Step_5 /> : isProgress == 6? <Step_6 /> : isProgress == 7? <Step_7 /> : isProgress == 8? <Step_8 /> : isProgress == 9? <Step_9 /> : isProgress == 10? <Step_10 />  : isProgress == 11? <Step_11 /> : isProgress == 12? <Step_12 /> : isProgress == 13? <Step_13 /> : null}
 
 
-<ListFooter onClickNext={() => setProgress(isProgress + 1)} />
+<ListFooter onClickNext={() => setProgress(isProgress + 1)} onClickBack={() => setProgress(isProgress - 1)} />
 </>
     )
 }
