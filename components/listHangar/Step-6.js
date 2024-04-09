@@ -15,6 +15,7 @@ const Step_6 = () => {
           src="/images/step-2.png"
           alt=""
           className="w-[100%] sm:w-[72%] pt-2"
+          data-aos="fade-left"
         />
       </div>
       <div className="footer fixed bottom-0 right-0 left-0 bg-white z-50">

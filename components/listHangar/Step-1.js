@@ -6,7 +6,7 @@ const Step_1 = () => {
     <div className="wrapper px-[20px] lg:px-[56px] mb-20 flex justify-center">
     <div className="container"> 
       <div className="sub-conatiner flex flex-col-reverse md:flex-col lg:flex-row lg:items-center lg:justify-center items-center gap-12 p-mb-16">
-        <div className="txt w-full sm:w-[42%] px-3">
+        <div className="txt w-full sm:w-[42%] px-3 fade-left">
           <h1 class=" font-semibold">Step 1</h1>
           <h2 class="text-[40px] sm:w-[400px] leading-[45px] font-semibold mb-4">
             Tell us about your hangar
@@ -20,6 +20,9 @@ const Step_1 = () => {
           src="/images/hangar-card2.png"
           alt=""
           className="w-[100%] sm:w-[38%] pt-2"
+          data-aos="slide-left"
+         
+          data-aos-easing="ease-in"
         />
       </div>
     

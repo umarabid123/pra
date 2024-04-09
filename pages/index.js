@@ -2,6 +2,9 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Button from "@/components/common/Button";
 import Card from "@/components/common/Card";
+import { useEffect, useState } from "react";
+import Aos from "aos";
+import'aos/dist/aos.css'
 
 const data = [
   {
@@ -538,8 +541,11 @@ const data = [
   },
  
 ];
-
 const Home = () => {
+useEffect(() =>{
+Aos.init({duration:900, easing:"linear"})
+},[])
+
   return (
     <div className="mb-16">
       {/* <Header /> */}

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Step_2 = () => {
   return (
-    <div className="wrapper px-[20px] lg:px-[56px] flex justify-center">
+    <div className="wrapper px-[20px] lg:px-[56px] flex justify-center" data-aos="fade-up">
       <div className="container">
         <div className="location-container mb-20">
           <div className="location-txt mb-4">

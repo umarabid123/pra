@@ -1,12 +1,12 @@
 const Card = ({item}) => {
     return(
-        <div className="img object-cover h-[100%]  min-w-[100%]  max-w-[100%] md:min-w-[45%]  md:max-w-[45%] lg:min-w-[32%]  lg:max-w-[32%] xl:min-w-[24%] xl:max-w-[20%] aspect-square relative">
+        <div className="img object-cover h-[100%] min-w-[100%]  max-w-[100%] md:min-w-[45%]  md:max-w-[45%] lg:min-w-[32%]  lg:max-w-[32%] xl:min-w-[24%] xl:max-w-[20%] aspect-square relative" data-aos="fade-left">
             <img
               src={item.images[0]}
               alt=""
               width="300"
               height="400"
-              className="rounded-2xl aspect-square relative w-[100%] md:w-[100%] lg:w-[300px]"
+              className="rounded-2xl aspect-square relative w-[100%] md:w-[100%] lg:w-[320px] xl:w-[400px]"
             />
             <svg
               xmlns="http://www.w3.org/2000/svg"

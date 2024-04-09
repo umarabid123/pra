@@ -92,7 +92,7 @@ const Header = () => {
               {router.asPath.includes("listhangar") ||
               router.asPath.includes("abouthangar") ||
               router.asPath.includes("hangarlocation") || router.asPath.includes("hangardescription") || router.asPath.includes("hangardimension") | router.asPath.includes("hangardescription") || router.asPath.includes("hangarcheckin") || router.asPath.includes("hangaraddimg") || router.asPath.includes("hangarprice") || router.asPath.includes("hangarfinish") || router.asPath.includes("hangarterms") || router.asPath.includes("hangaramenities") || router.asPath.includes("hangarlastpage") || router.asPath.includes("hangarlastpage") || router.asPath.includes("standout") ? null : (
-                <Link href="/listhangar">
+                <Link href="//listhangar">
                   <button className="hidden md:block px-3 py-1 hover:bg-gray-100 text-sm font-medium cursor-pointer whitespace-nowrap text-[#000000]">
                     List a hanger
                   </button>
