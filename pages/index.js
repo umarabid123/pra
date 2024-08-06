@@ -1,10 +1,8 @@
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 import Button from "@/components/common/Button";
 import Card from "@/components/common/Card";
-import { useEffect, useState } from "react";
 import Aos from "aos";
-import'aos/dist/aos.css'
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 const data = [
   {
@@ -496,54 +494,77 @@ const data = [
     },
   },
   {
-    id: 650,
-    title: "Test",
-    address: "AAA Wholesale Cash & Carry, 49th Place, Queens, NY, USA",
-    slug: "test",
-    price_per_night: 200,
+    id: 658,
+    title: "12-03-24",
+    address: "JK Kabab, Weston Ridge Drive, Naperville, IL, USA",
+    slug: "12-03-24",
+    price_per_night: 60,
+    price_per_month: 600,
+    images: [
+      "https://hangar-storage-2.s3.amazonaws.com/hangars/658/image-1.jpg",
+      "https://hangar-storage-2.s3.amazonaws.com/hangars/658/image-2.jpg",
+      "https://hangar-storage-2.s3.amazonaws.com/hangars/658/image-3.jpg",
+      "https://hangar-storage-2.s3.amazonaws.com/hangars/658/image-4.jpg",
+      "https://hangar-storage-2.s3.amazonaws.com/hangars/658/image-5.jpg",
+      "https://hangar-storage-2.s3.amazonaws.com/hangars/658/image-6.jpg",
+      "https://hangar-storage-2.s3.amazonaws.com/hangars/658/image-7.jpg",
+    ],
+    city: "Naperville",
+    state: "Illinois",
+    airport: {
+      name: "El Centro NAF Airport (Vraciu Field)",
+      ICAO: "KNJK",
+      coordinates: "-115.671996, 32.829201",
+    },
+  },
+  {
+    id: 657,
+    title: "test test",
+    address: "Raceway Mall Drive, Freehold, NJ, USA",
+    slug: "test-test",
+    price_per_night: 100,
+    price_per_month: 1500,
+    images: [
+      "https://hangar-storage-2.s3.amazonaws.com/hangars/657/image-1.jpg",
+      "https://hangar-storage-2.s3.amazonaws.com/hangars/657/image-2.jpg",
+      "https://hangar-storage-2.s3.amazonaws.com/hangars/657/image-3.jpg",
+      "https://hangar-storage-2.s3.amazonaws.com/hangars/657/image-4.peg",
+      "https://hangar-storage-2.s3.amazonaws.com/hangars/657/image-5.jpg",
+    ],
+    city: "Freehold",
+    state: "New Jersey",
+    airport: {
+      name: "Raceway Airport",
+      ICAO: "II32",
+      coordinates: "-87.38140106201172, 38.049198150634766",
+    },
+  },
+  {
+    id: 651,
+    title: "new req list",
+    address: "123 Farm, Highland Springs Avenue, Beaumont, CA, USA",
+    slug: "new-req-list",
+    price_per_night: 1.01,
     price_per_month: 0,
     images: [
-      "https://hangar-storage-2.s3.amazonaws.com/hangars/650/image-1.png",
-      "https://hangar-storage-2.s3.amazonaws.com/hangars/650/image-2.png",
-      "https://hangar-storage-2.s3.amazonaws.com/hangars/650/image-3.png",
-      "https://hangar-storage-2.s3.amazonaws.com/hangars/650/image-4.png",
-      "https://hangar-storage-2.s3.amazonaws.com/hangars/650/image-5.png",
+      "https://hangar-storage-2.s3.amazonaws.com/hangars/651/image-1._00",
+      "https://hangar-storage-2.s3.amazonaws.com/hangars/651/image-2._01",
+      "https://hangar-storage-2.s3.amazonaws.com/hangars/651/image-3._02",
+      "https://hangar-storage-2.s3.amazonaws.com/hangars/651/image-4._03",
+      "https://hangar-storage-2.s3.amazonaws.com/hangars/651/image-5._04",
     ],
-    city: "aaaaa",
-    state: "New York",
+    city: "Beaumont",
+    state: "California",
     airport: {
       name: "Lowell Field",
       ICAO: "00AK",
       coordinates: "-151.695999146, 59.94919968",
     },
   },
-  {
-    id: 648,
-    title: "Hangar Test 5",
-    address: "450 Sutter Street, Sutter Street, San Francisco, CA, USA",
-    slug: "hangar-test-5",
-    price_per_night: 40,
-    price_per_month: 300,
-    images: [
-      "https://hangar-storage-2.s3.amazonaws.com/hangars/648/image-1.jpg",
-      "https://hangar-storage-2.s3.amazonaws.com/hangars/648/image-2.jpg",
-      "https://hangar-storage-2.s3.amazonaws.com/hangars/648/image-3.jpg",
-      "https://hangar-storage-2.s3.amazonaws.com/hangars/648/image-4.jpg",
-      "https://hangar-storage-2.s3.amazonaws.com/hangars/648/image-5.jpg",
-    ],
-    city: "San Francisco",
-    state: "California",
-    airport: {
-      name: "Flying W Ranch Airport",
-      ICAO: "04AA",
-      coordinates: "-150.811387, 60.535833",
-    },
-  },
- 
 ];
 const Home = () => {
 useEffect(() =>{
-Aos.init({duration:900, easing:"linear"})
+Aos.init({duration:700, easing:"linear"})
 },[])
 
   return (
@@ -555,8 +576,7 @@ Aos.init({duration:900, easing:"linear"})
       <div className="card-item flex flex-wrap justify-center md:gap-4 lg:gap-3 gap-4 w-[100%]">
         {data.map((item, index) =>(
 
-          <Card {...{item}} />
-    
+          <Card {...{item}} />    
         ))}
       </div>
       </div>

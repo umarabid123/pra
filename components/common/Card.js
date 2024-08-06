@@ -1,6 +1,6 @@
 const Card = ({item}) => {
     return(
-        <div className="img object-cover h-[100%] min-w-[100%]  max-w-[100%] md:min-w-[45%]  md:max-w-[45%] lg:min-w-[32%]  lg:max-w-[32%] xl:min-w-[24%] xl:max-w-[20%] aspect-square relative" data-aos="fade-left">
+        <div className="img object-cover h-[100%] min-w-[100%]  max-w-[100%] md:min-w-[45%]  md:max-w-[45%] lg:min-w-[32%]  lg:max-w-[32%] xl:min-w-[24%] xl:max-w-[20%] aspect-square relative" data-aos="fade-up">
             <img
               src={item.images[0]}
               alt=""
